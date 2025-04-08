@@ -9,71 +9,25 @@ import Container from "@mui/material/Container";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link, Outlet } from "react-router-dom";
 import NavButton from "../../components/nav-button/nav-button.component";
-import { Email, LinkedIn, SportsEsports } from "@mui/icons-material";
 import ActiveIcon from "../../components/active-icon/active-icon.component";
 import DrawerMenu from "../../components/drawer-menu/drawer-menu.component";
-
-const pages = [
-  {
-    id: 1,
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "About",
-    link: "/about",
-  },
-  {
-    id: 3,
-    title: "Experiences",
-    link: "/experiences",
-  },
-  {
-    id: 4,
-    title: "Projects",
-    link: "/projects",
-  },
-  {
-    id: 5,
-    title: "Passions",
-    link: "/passions",
-  },
-];
-
-const activeIcons = [
-  {
-    id: 1,
-    title: "Email",
-    icon: <Email />,
-    link: "mailto:andrew21dylan@gmail.com",
-  },
-  {
-    id: 2,
-    title: "LinkedIn",
-    icon: <LinkedIn />,
-    link: "https://www.linkedin.com/in/dylan-andrew-razafintsalama/",
-  },
-  {
-    id: 3,
-    title: "Itch.io",
-    icon: <SportsEsports />,
-    link: "",
-  },
-];
+import { Divider } from "@mui/material";
+import getNavigationData from "./getNavigationData";
+import LanguageSelector from "../../components/language-selector/language-selector.component";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleDrawer = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const { pages, activeIcons } = getNavigationData();
 
   return (
     <Fragment>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <Logo sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Typography
               component={Link}
               to={"/"}
@@ -133,10 +87,15 @@ const Navigation = () => {
                 <NavButton key={page.id} page={page} />
               ))}
             </Box>
-            <Box display="flex" columnGap="8px">
+            <Box display="flex" columnGap="2px">
               {activeIcons.map((activeIcon) => (
                 <ActiveIcon key={activeIcon.id} activeIcon={activeIcon} />
               ))}
+              <Divider
+                orientation="vertical"
+                sx={{ height: "24px", alignSelf: "center" }}
+              />
+              <LanguageSelector />
             </Box>
           </Toolbar>
         </Container>
