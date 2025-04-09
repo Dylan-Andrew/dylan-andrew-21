@@ -6,15 +6,9 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         padding: "16px",
         textAlign: "center",
+        marginBottom: "10px",
       }}
     >
       <Typography sx={{ fontSize: 10 }}>{t("copyright")}</Typography>

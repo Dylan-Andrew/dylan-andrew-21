@@ -63,6 +63,7 @@ const Home = () => {
           textDecoration: "none",
           color: "inherit",
           marginTop: "16px",
+          marginBottom: "64px",
         }}
       >
         <Typography
