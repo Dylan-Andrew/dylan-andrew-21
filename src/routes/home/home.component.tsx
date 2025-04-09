@@ -14,22 +14,46 @@ const Home = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        mt: "20px",
+        m: "10px",
       }}
     >
       <AnimatedIntro />
-      <Typography variant="h2" component="h1" sx={{ marginBottom: "32px" }}>
+      <Typography
+        variant="h2"
+        component="h1"
+        sx={{
+          marginBottom: "32px",
+          fontSize: {
+            xs: "32px",
+            sm: "48px",
+            md: "64px",
+          },
+          textAlign: "center",
+        }}
+      >
         <TypeAnimation
+          key={t("welcome")}
           sequence={[t("welcome")]}
           wrapper="span"
           speed={21}
-          style={{ color: theme.palette.primary.contrastText }}
+          style={{
+            color: theme.palette.primary.contrastText,
+            textAlign: "center",
+          }}
         />
       </Typography>
-      <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
+      <Typography
+        variant="h6"
+        component="p"
+        sx={{ marginBottom: "16px", textAlign: "center" }}
+      >
         {t("homeDescription1")}
       </Typography>
-      <Typography variant="h6" component="p" sx={{ marginBottom: "32px" }}>
+      <Typography
+        variant="h6"
+        component="p"
+        sx={{ marginBottom: "32px", textAlign: "center" }}
+      >
         {t("homeDescription2")}
       </Typography>
       <Link

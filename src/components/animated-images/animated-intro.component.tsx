@@ -7,9 +7,12 @@ const AnimatedIntro = () => {
   return (
     <Box
       sx={{
-        width: 350,
+        width: {
+          xs: 250,
+          sm: 300,
+          md: 350,
+        },
         mx: "auto",
-        mb: 2,
       }}
     >
       <Lottie
