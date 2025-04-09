@@ -12,6 +12,8 @@ i18n
       en: {
         translation: {
           welcome: "Hi there, Dylan Andrew here!",
+          copyright:
+            "Built and designed by Dylan Andrew. All rights reserved. ©",
           homeDescription1:
             "I'm a software developer based in Paris, with a Master's degree in Computer Science.",
           homeDescription2:
@@ -29,8 +31,10 @@ i18n
       fr: {
         translation: {
           welcome: "Hello, je suis Dylan Andrew !",
+          copyright:
+            "Conçu et développé par Dylan Andrew. Tous droits réservés. ©",
           homeDescription1:
-            "Développeur Full Stack basé à Paris, diplômé d’un Master en informatique.",
+            "Développeur Full Stack basé à Paris, diplômé d'un Master en informatique.",
           homeDescription2:
             "Je conçois des expériences numériques soignées, portées par une approche rigoureuse du clean code.",
           homeButton: "En savoir plus →",

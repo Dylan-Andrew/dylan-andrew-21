@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { TypeAnimation } from "react-type-animation";
 import AnimatedIntro from "../../components/animated-images/animated-intro.component";
+import Footer from "../../components/footer/footer.component";
 
 const Home = () => {
   const theme = useTheme();
@@ -80,6 +81,7 @@ const Home = () => {
           {t("homeButton")}
         </Typography>
       </Link>
+      <Footer />
     </Box>
   );
 };
