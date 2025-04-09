@@ -1,17 +1,20 @@
 import { Language } from "@mui/icons-material";
-import { IconButton, Menu, MenuItem, Tooltip } from "@mui/material";
+import { IconButton, Menu, MenuItem, Tooltip, useTheme } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const languages = [
-  { code: "en", lang: "English" },
-  { code: "fr", lang: "Français" },
+  { code: "en", name: "English", icon: "🇺🇸" },
+  { code: "fr", name: "Français", icon: "🇫🇷" },
 ];
 
 const LanguageSelector = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { i18n } = useTranslation();
+  const theme = useTheme();
+
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -26,7 +29,16 @@ const LanguageSelector = () => {
   return (
     <div>
       <Tooltip title="Language Menu">
-        <IconButton onClick={handleClick}>
+        <IconButton
+          onClick={handleClick}
+          sx={{
+            color: "text.primary",
+            "&:hover": {
+              backgroundColor: "transparent",
+              color: theme.palette.primary.contrastText,
+            },
+          }}
+        >
           <Language />
         </IconButton>
       </Tooltip>
@@ -43,8 +55,18 @@ const LanguageSelector = () => {
             onClick={() => {
               changeLanguage(language.code);
             }}
+            sx={{
+              color:
+                i18n.language === language.code
+                  ? theme.palette.primary.contrastText
+                  : "text.primary",
+              "&:hover": {
+                backgroundColor: "transparent",
+                color: theme.palette.primary.contrastText,
+              },
+            }}
           >
-            {language.lang}
+            {language.icon + " " + language.name}
           </MenuItem>
         ))}
       </Menu>

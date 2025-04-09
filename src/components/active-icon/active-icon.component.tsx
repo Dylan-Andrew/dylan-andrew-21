@@ -1,8 +1,9 @@
-import { IconButton, Tooltip } from "@mui/material";
+import { IconButton, Tooltip, useTheme } from "@mui/material";
 import type { ActiveIcon } from "../../types/active-icon";
 
 const ActiveIcon = ({ activeIcon }: { activeIcon: ActiveIcon }) => {
   const { title, icon, link } = activeIcon;
+  const theme = useTheme();
 
   const handleClick = () => {
     if (link) {
@@ -16,7 +17,18 @@ const ActiveIcon = ({ activeIcon }: { activeIcon: ActiveIcon }) => {
 
   return (
     <Tooltip title={title}>
-      <IconButton onClick={handleClick}>{icon}</IconButton>
+      <IconButton
+        onClick={handleClick}
+        sx={{
+          color: "text.primary",
+          "&:hover": {
+            backgroundColor: "transparent",
+            color: theme.palette.primary.contrastText,
+          },
+        }}
+      >
+        {icon}
+      </IconButton>
     </Tooltip>
   );
 };

@@ -9,7 +9,6 @@ const getNavigationData = () => {
     { id: 3, title: "experiences", link: "/experiences" },
     { id: 4, title: "projects", link: "/projects" },
     { id: 5, title: "passions", link: "/passions" },
-    { id: 6, title: "contact", link: "/contact" },
   ];
 
   const activeIcons: ActiveIcon[] = [
@@ -29,7 +28,7 @@ const getNavigationData = () => {
       id: 3,
       title: "Itch.io",
       icon: <SportsEsports />,
-      link: "",
+      link: "https://dylanandrew.itch.io/",
     },
   ];
 

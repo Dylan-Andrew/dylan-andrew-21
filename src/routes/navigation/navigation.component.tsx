@@ -6,7 +6,6 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import AdbIcon from "@mui/icons-material/Adb";
 import { Link, Outlet } from "react-router-dom";
 import NavButton from "../../components/nav-button/nav-button.component";
 import ActiveIcon from "../../components/active-icon/active-icon.component";
@@ -14,6 +13,7 @@ import DrawerMenu from "../../components/drawer-menu/drawer-menu.component";
 import { Divider } from "@mui/material";
 import getNavigationData from "./getNavigationData";
 import LanguageSelector from "../../components/language-selector/language-selector.component";
+import DALogoSrc from "./../../assets/21st.svg";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,10 +24,27 @@ const Navigation = () => {
 
   return (
     <Fragment>
-      <AppBar position="static">
+      <AppBar
+        position="static"
+        sx={{
+          borderRadius: "10px",
+          bgcolor: "primary.main",
+          boxShadow: "none",
+        }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Logo sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <Box
+              component="img"
+              sx={{
+                display: { xs: "none", md: "flex" },
+                mr: 1,
+                height: 21,
+                width: 21,
+              }}
+              alt="21st Logo"
+              src={DALogoSrc}
+            />
             <Typography
               component={Link}
               to={"/"}
@@ -36,10 +53,9 @@ const Navigation = () => {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
+                fontStyle: "italic",
+                color: "text.primary",
                 textDecoration: "none",
               }}
             >
@@ -63,7 +79,17 @@ const Navigation = () => {
                 toggleDrawer={toggleDrawer}
               />
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            <Box
+              component="img"
+              sx={{
+                display: { xs: "flex", md: "none" },
+                mr: 1,
+                height: 21,
+                width: 21,
+              }}
+              alt="21st Logo"
+              src={DALogoSrc}
+            />
             <Typography
               variant="h5"
               noWrap
@@ -73,10 +99,8 @@ const Navigation = () => {
                 mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
+                fontStyle: "italic",
+                color: "text.primary",
                 textDecoration: "none",
               }}
             >
