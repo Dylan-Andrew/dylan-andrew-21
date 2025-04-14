@@ -1,16 +1,19 @@
 import { useState, Fragment } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+import { Outlet, Link } from "react-router-dom";
+
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import { Link, Outlet } from "react-router-dom";
 import NavButton from "../../components/nav-button/nav-button.component";
 import ActiveIcon from "../../components/active-icon/active-icon.component";
 import DrawerMenu from "../../components/drawer-menu/drawer-menu.component";
-import { Divider } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Container,
+  Divider,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import getNavigationData from "./getNavigationData";
 import LanguageSelector from "../../components/language-selector/language-selector.component";
 import DALogoSrc from "./../../assets/21st.svg";
