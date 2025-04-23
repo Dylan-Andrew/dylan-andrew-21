@@ -15,7 +15,8 @@ const Home = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        m: "10px",
+        my: "10px",
+        mx: "50px",
       }}
     >
       <AnimatedIntro />

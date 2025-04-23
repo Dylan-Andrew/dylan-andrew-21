@@ -11,6 +11,7 @@ i18n
     resources: {
       en: {
         translation: {
+          languageCode: "en",
           welcome: "Hi there, Dylan Andrew here!",
           copyright:
             "Built and designed by Dylan Andrew. All rights reserved. ©",
@@ -26,10 +27,19 @@ i18n
           contact: "Contact",
           home: "Home",
           language: "Change Language",
+          aboutDescription1:
+            "I'm a full-stack developer at <finetic>Finetic</finetic>, working on a custom web application that streamlines the creation of business plans.",
+          aboutDescription2:
+            "I am currently in the final year of a Master's degree in IT Engineering Management at <university>ESIEE-IT</university>",
+          aboutDescription3:
+            "Outside of work, I'm passionate about Formula 1, enjoy playing a lot of Dota 2, love cooking, and curious about science and new technologies.",
+          technologiesIntroduction:
+            "Here are some technologies I have been working with:",
         },
       },
       fr: {
         translation: {
+          languageCode: "fr",
           welcome: "Hello, je suis Dylan Andrew !",
           copyright:
             "Conçu et développé par Dylan Andrew. Tous droits réservés. ©",
@@ -45,6 +55,14 @@ i18n
           contact: "Contact",
           home: "Accueil",
           language: "Changer de langue",
+          aboutDescription1:
+            "Je suis développeur full-stack chez <finetic>Finetic</finetic>, travaillant sur une application web sur mesure qui simplifie la création de business plans.",
+          aboutDescription2:
+            "Je suis actuellement en dernière année du Master Manager en Ingénierie Informatique à l'<university>ESIEE-IT</university>",
+          aboutDescription3:
+            "En dehors du travail, je suis passionné par la Formule 1, je joue beaucoup à Dota 2, j'aime cuisiner, et je m'intéresse à la science et aux nouvelles technologies.",
+          technologiesIntroduction:
+            "Voici quelques technologies avec lesquelles j'ai travaillé :",
         },
       },
     },
