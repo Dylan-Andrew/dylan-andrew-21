@@ -53,6 +53,22 @@ i18n
             "Developed a website for the <fea>women entrepreneurs of Analamanga</fea> using WordPress",
           sahazaGroupDescription3:
             "Developed an intranet site for the Sahaza Group using Drupal",
+          passionTitle: "My Passions",
+          passionTitleDescription:
+            "Beyond code, I'm driven by the speed of Formula 1, the strategy of Dota 2, and the thrill of competitive sports.",
+          favoriteDriver: "Favorite Driver",
+          favoriteTeam: "Favorite Team",
+          favoriteTeamValue: "All of them",
+          yearsFollowing: "Years Following",
+          yearsFollowingValue: "Since 2008",
+          mainRole: "Main Role",
+          favoriteHero: "Favorite Hero",
+          rank: "Rank",
+          totalPlayTime: "Total Play Time",
+          totalPlayTimeValue: "Over 7000 hours",
+          checkMyProfile: "Check my profile",
+          dylanAndrewQuote:
+            "Whether it's the precision of an F1 lap or the perfect team fight in Dota, I'm drawn to pursuits that demand excellence, strategy, and relentless improvement.",
         },
       },
       fr: {
@@ -100,6 +116,22 @@ i18n
             "J'ai développé un site web pour les <fea>femmes entrepreneurs d'Analamanga</fea> en utilisant WordPress",
           sahazaGroupDescription3:
             "J'ai développé un site intranet pour le Sahaza Group en utilisant Drupal",
+          passionTitle: "Mes Passions",
+          passionTitleDescription:
+            "Au-delà du code, je suis passionné par la vitesse de la Formule 1, la stratégie de Dota 2 et l'adrénaline des sports compétitifs.",
+          favoriteDriver: "Pilote préféré",
+          favoriteTeam: "Équipe préférée",
+          favoriteTeamValue: "Toutes",
+          yearsFollowing: "Années de suivi",
+          yearsFollowingValue: "Depuis 2008",
+          mainRole: "Rôle principal",
+          favoriteHero: "Héro préféré",
+          rank: "Rang",
+          totalPlayTime: "Temps de jeu total",
+          totalPlayTimeValue: "Plus de 7000 heures",
+          checkMyProfile: "Voir mon profil",
+          dylanAndrewQuote:
+            "Que ce soit la précision d'un tour en F1 ou la coordination parfaite d'une équipe dans Dota, je suis attiré par les défis qui exigent excellence, stratégie et amélioration continue.",
         },
       },
     },

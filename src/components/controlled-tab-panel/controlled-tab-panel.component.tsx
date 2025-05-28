@@ -33,6 +33,7 @@ const ControlledTabPanel = ({ tabData }: { tabData: TabData }) => {
       {tabData.description.map((desc, index) => (
         <Box
           sx={{ display: "flex", alignItems: "center", marginBottom: "8px" }}
+          key={index}
         >
           <PlayArrowOutlinedIcon
             sx={{
