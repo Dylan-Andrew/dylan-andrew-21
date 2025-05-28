@@ -102,7 +102,7 @@ const About = () => {
           </Typography>
         </Grid>
         <Grid
-          size={{ xs: 3, md: 3 }}
+          size={{ xs: 12, md: 3 }}
           sx={{
             display: "flex",
             justifyContent: "center",

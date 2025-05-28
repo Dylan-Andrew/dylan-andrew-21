@@ -10,12 +10,12 @@ import Passions from "./routes/passions/passions.component";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="experiences" element={<Experiences />} />
-        {/* <Route path="projects" element={<Projects />} /> */}
-        <Route path="passions" element={<Passions />} />
+      <Route path="/dylan-andrew-21/" element={<Navigation />}>
+        <Route path="/dylan-andrew-21/" element={<Home />} />
+        <Route path="/dylan-andrew-21/about" element={<About />} />
+        <Route path="/dylan-andrew-21/experiences" element={<Experiences />} />
+        {/* <Route path="/dylan-andrew-21/projects" element={<Projects />} /> */}
+        <Route path="/dylan-andrew-21/passions" element={<Passions />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Route>
     </Routes>

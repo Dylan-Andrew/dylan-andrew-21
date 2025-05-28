@@ -50,7 +50,7 @@ const Navigation = () => {
             />
             <Typography
               component={Link}
-              to={"/"}
+              to={"/dylan-andrew-21/"}
               variant="h6"
               noWrap
               sx={{

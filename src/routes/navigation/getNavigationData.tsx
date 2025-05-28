@@ -4,11 +4,11 @@ import { ActiveIcon } from "../../types/active-icon";
 
 const getNavigationData = () => {
   const pages: Page[] = [
-    { id: 1, title: "home", link: "/" },
-    { id: 2, title: "about", link: "/about" },
-    { id: 3, title: "experiences", link: "/experiences" },
-    // { id: 4, title: "projects", link: "/projects" },
-    { id: 4, title: "passions", link: "/passions" },
+    { id: 1, title: "home", link: "/dylan-andrew-21/" },
+    { id: 2, title: "about", link: "/dylan-andrew-21/about" },
+    { id: 3, title: "experiences", link: "/dylan-andrew-21/experiences" },
+    // { id: 4, title: "projects", link: "/dylan-andrew-21/projects" },
+    { id: 4, title: "passions", link: "/dylan-andrew-21/passions" },
   ];
 
   const activeIcons: ActiveIcon[] = [
