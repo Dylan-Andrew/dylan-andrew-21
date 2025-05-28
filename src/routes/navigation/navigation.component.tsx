@@ -101,9 +101,10 @@ const Navigation = () => {
                 mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontStyle: "italic",
                 color: "text.primary",
                 textDecoration: "none",
+                fontSize: { xs: "1rem", sm: "1.25rem" },
+                fontWeight: 700,
               }}
             >
               Dylan Andrew
