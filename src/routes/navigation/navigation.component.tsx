@@ -57,7 +57,6 @@ const Navigation = () => {
                 mr: 2,
                 display: { xs: "none", md: "flex" },
                 fontWeight: 700,
-                fontStyle: "italic",
                 color: "text.primary",
                 textDecoration: "none",
               }}

@@ -65,8 +65,8 @@ const Passions = () => {
                 icon: <EmojiEventsOutlined />,
               },
               {
-                label: "Dream Circuit",
-                value: "Spa-Francorchamps",
+                label: t("favoriteCircuit"),
+                value: "Suzuka",
                 icon: <LocationOnOutlined />,
               },
               {

@@ -20,7 +20,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Playfair Display", serif',
+    fontFamily: '"Montserrat", serif',
   },
 });
 

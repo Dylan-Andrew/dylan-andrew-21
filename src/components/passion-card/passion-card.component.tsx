@@ -87,7 +87,17 @@ const PassionCard = ({
           <Grid container spacing={2} sx={{ mb: buttonText ? 3 : 0 }}>
             {stats.map((stat, index) => (
               <Grid size={{ xs: 6 }} key={index}>
-                <Card variant="outlined" sx={{ p: 2, borderRadius: 5 }}>
+                <Card
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 5,
+                    height: 100,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
                   <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
                     {stat.icon && (
                       <Box
@@ -99,14 +109,34 @@ const PassionCard = ({
                           justifyContent: "center",
                           mr: 1,
                           color: theme.palette.primary.contrastText,
+                          flexShrink: 0,
                         }}
                       >
                         {stat.icon}
                       </Box>
                     )}
-                    <Typography variant="body1">{stat.label}</Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontSize: "0.875rem",
+                        lineHeight: 1.2,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                      }}
+                    >
+                      {stat.label}
+                    </Typography>
                   </Box>
-                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: 600,
+                      fontSize: "0.875rem",
+                    }}
+                  >
                     {stat.value}
                   </Typography>
                 </Card>
