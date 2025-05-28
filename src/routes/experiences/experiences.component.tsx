@@ -59,7 +59,7 @@ const Experiences = () => {
           textAlign: "center",
         }}
       >
-        {t("experiences")}
+        {t("experiencesTitle")}
       </Typography>
       <ControlledTabs tabDatas={experiences} />
     </Box>

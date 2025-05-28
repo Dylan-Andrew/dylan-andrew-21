@@ -47,9 +47,9 @@ const Passions = () => {
       <Grid container spacing={5}>
         <Grid size={{ xs: 12, md: 6 }}>
           <PassionCard
-            title="Formula 1"
-            subtitle="The pinnacle of motorsport"
-            description="The adrenaline, precision, and cutting-edge technology of F1 captivate me. Every race weekend is a masterclass in engineering excellence."
+            title={t("f1Title")}
+            subtitle={t("f1Subtitle")}
+            description={t("f1Description")}
             svgIcon={
               <img src={f1Icon} width={104} height={104} alt="F1 Logo" />
             }
@@ -80,8 +80,8 @@ const Passions = () => {
         <Grid size={{ xs: 12, md: 6 }}>
           <PassionCard
             title="Dota 2"
-            subtitle="Strategic warfare at its finest"
-            description="The ultimate test of strategy, teamwork, and mechanical skill. Every match is a chess game played at lightning speed."
+            subtitle={t("dota2Subtitle")}
+            description={t("dota2Description")}
             svgIcon={
               <img src={dotaIcon} width={56} height={56} alt="Dota 2 Logo" />
             }

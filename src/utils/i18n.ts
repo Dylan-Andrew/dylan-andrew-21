@@ -35,6 +35,7 @@ i18n
             "Outside of work, I'm passionate about Formula 1, enjoy playing a lot of Dota 2, love cooking, and curious about science and new technologies.",
           technologiesIntroduction:
             "Here are some technologies I have been working with:",
+          experiencesTitle: "My Experiences",
           fineticTitle: "Fullstack developper @ <title>Finetic</title>",
           fineticPeriod: "September 2023 - Present",
           fineticDescription1:
@@ -56,11 +57,18 @@ i18n
           passionTitle: "My Passions",
           passionTitleDescription:
             "Beyond code, I'm driven by the speed of Formula 1, the strategy of Dota 2, and the thrill of competitive sports.",
+          f1Title: "Formula 1",
+          f1Subtitle: "The pinnacle of motorsport",
+          f1Description:
+            "The adrenaline, precision, and cutting-edge technology of F1 captivate me. Every race weekend is a masterclass in engineering excellence and human skill pushed to the absolute limit.",
           favoriteDriver: "Favorite Driver",
           favoriteTeam: "Favorite Team",
           favoriteTeamValue: "All of them",
           yearsFollowing: "Years Following",
           yearsFollowingValue: "Since 2008",
+          dota2Subtitle: "The ultimate strategy game",
+          dota2Description:
+            "Dota 2 is more than just a game; it's a test of strategy, teamwork, and skill. I love the depth of its gameplay and the thrill of competing at the highest levels.",
           mainRole: "Main Role",
           favoriteHero: "Favorite Hero",
           rank: "Rank",
@@ -97,6 +105,7 @@ i18n
             "En dehors du travail, je suis passionné par la Formule 1, je joue beaucoup à Dota 2, j'aime cuisiner, et je m'intéresse à la science et aux nouvelles technologies.",
           technologiesIntroduction:
             "Voici quelques technologies avec lesquelles j'ai travaillé :",
+          experiencesTitle: "Mes Expériences",
           fineticTitle: "Développeur fullstack chez <title>Finetic</title>",
           fineticPeriod: "Septembre 2023 - Présent",
           fineticDescription1:
@@ -119,11 +128,18 @@ i18n
           passionTitle: "Mes Passions",
           passionTitleDescription:
             "Au-delà du code, je suis passionné par la vitesse de la Formule 1, la stratégie de Dota 2 et l'adrénaline des sports compétitifs.",
+          f1Title: "Formule 1",
+          f1Subtitle: "Le summum du sport automobile",
+          f1Description:
+            "L'adrénaline, la précision et la technologie de pointe de la F1 me captivent. Chaque week-end de course est une leçon de maîtrise technique et de compétence humaine poussée à l'extrême.",
           favoriteDriver: "Pilote préféré",
           favoriteTeam: "Équipe préférée",
           favoriteTeamValue: "Toutes",
           yearsFollowing: "Années de suivi",
           yearsFollowingValue: "Depuis 2008",
+          dota2Subtitle: "Le jeu de stratégie ultime",
+          dota2Description:
+            "Dota 2 est plus qu'un simple jeu ; c'est un test de stratégie, de travail d'équipe et de compétence. J'adore la profondeur de son gameplay et l'excitation de la compétition au plus haut niveau.",
           mainRole: "Rôle principal",
           favoriteHero: "Héro préféré",
           rank: "Rang",
