@@ -2,7 +2,7 @@ import { Box, Grid, Link, List, Typography, useTheme } from "@mui/material";
 import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
 import { Trans, useTranslation } from "react-i18next";
 
-import myself from "../../assets/21st.png";
+import myself from "../../assets/DylanAndrew.jpg";
 
 const technologies = [
   "JavaScript",
