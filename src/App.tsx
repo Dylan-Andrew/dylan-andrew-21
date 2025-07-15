@@ -9,15 +9,13 @@ import Passions from "./routes/passions/passions.component";
 const App = () => {
   return (
     <Routes>
-      <Routes>
-        <Route path="/" element={<Navigation />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="experiences" element={<Experiences />} />
-          <Route path="passions" element={<Passions />} />
-          <Route path="*" element={<h1>404 Not Found</h1>} />
-        </Route>
-      </Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="experiences" element={<Experiences />} />
+        <Route path="passions" element={<Passions />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Route>
     </Routes>
   );
 };
