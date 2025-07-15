@@ -7,7 +7,6 @@ const getNavigationData = () => {
     { id: 1, title: "home", link: "/dylan-andrew-21/" },
     { id: 2, title: "about", link: "/dylan-andrew-21/about" },
     { id: 3, title: "experiences", link: "/dylan-andrew-21/experiences" },
-    // { id: 4, title: "projects", link: "/dylan-andrew-21/projects" },
     { id: 4, title: "passions", link: "/dylan-andrew-21/passions" },
   ];
 

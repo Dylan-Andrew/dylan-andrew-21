@@ -54,6 +54,15 @@ const ControlledTabPanel = ({ tabData }: { tabData: TabData }) => {
                     sx={{ textDecoration: "none" }}
                   />
                 ),
+                recruter: (
+                  <Link
+                    href="https://recruter-a-madagascar.com"
+                    color={theme.palette.primary.contrastText}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ textDecoration: "none" }}
+                  />
+                ),
               }}
             ></Trans>
           </Typography>

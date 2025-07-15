@@ -54,6 +54,8 @@ i18n
             "Developed a website for the <fea>women entrepreneurs of Analamanga</fea> using WordPress",
           sahazaGroupDescription3:
             "Developed an intranet site for the Sahaza Group using Drupal",
+          sahazaGroupDescription4:
+            "Played a key role in the development of <recruter>recruter-a-madagascar.com</recruter>",
           passionTitle: "My Passions",
           passionTitleDescription:
             "Beyond code, I'm driven by the speed of Formula 1, the strategy of Dota 2, and the thrill of competitive sports.",
@@ -126,6 +128,8 @@ i18n
             "J'ai développé un site web pour les <fea>femmes entrepreneurs d'Analamanga</fea> en utilisant WordPress",
           sahazaGroupDescription3:
             "J'ai développé un site intranet pour le Sahaza Group en utilisant Drupal",
+          sahazaGroupDescription4:
+            "J'ai joué un rôle clé dans le développement de <recruter>recruter-a-madagascar.com</recruter>",
           passionTitle: "Mes Passions",
           passionTitleDescription:
             "Au-delà du code, je suis passionné par la vitesse de la Formule 1, la stratégie de Dota 2 et l'adrénaline des sports compétitifs.",
