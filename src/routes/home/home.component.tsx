@@ -59,7 +59,7 @@ const Home = () => {
         {t("homeDescription2")}
       </Typography>
       <Link
-        to="/dylan-andrew-21/about"
+        to="/about"
         style={{
           textDecoration: "none",
           color: "inherit",
