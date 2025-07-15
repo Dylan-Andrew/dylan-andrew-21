@@ -30,6 +30,7 @@ const experiences: TabData[] = [
       "sahazaGroupDescription1",
       "sahazaGroupDescription2",
       "sahazaGroupDescription3",
+      "sahazaGroupDescription4",
     ],
   },
 ];
