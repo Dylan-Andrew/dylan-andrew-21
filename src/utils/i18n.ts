@@ -39,9 +39,15 @@ i18n
           fineticTitle: "Fullstack developper @ <title>Finetic</title>",
           fineticPeriod: "September 2023 - Present",
           fineticDescription1:
-            "Developping a custom web application that simplifies the creation of business plans.",
+            "Built a custom web application that streamlines the creation and editing of business plans, from UI to API.",
           fineticDescription2:
-            "Relevant technologies/tools used: React, TypeScript, Python, Django, PostgreSQL, Vercel.",
+            "Developed front-end features with React and TypeScript, using Material UI / Joy UI for clean, consistent interfaces.",
+          fineticDescription3:
+            "Designed and implemented backend logic and REST APIs with Python/Django.",
+          fineticDescription4:
+            "Managed database interactions with PostgreSQL, optimizing data retrieval and storage.",
+          fineticDescription5:
+            "Participated in code reviews and CI/CD workflows using GitHub and Vercel, ensuring code quality and smooth deployments.",
           tripalioTitle: "Intern backend developper @ <title>Tripalio</title>",
           tripalioPeriod: "May 2023 - July 2023",
           tripalioDescription1:
@@ -112,9 +118,15 @@ i18n
           fineticTitle: "Développeur fullstack chez <title>Finetic</title>",
           fineticPeriod: "Septembre 2023 - Présent",
           fineticDescription1:
-            "Développement d'une application web sur mesure qui simplifie la création de business plans.",
+            "Développement d'une application web sur mesure facilitant la création et l'édition de business plans.",
           fineticDescription2:
-            "Technologies/outils pertinents utilisés : React, TypeScript, Python, Django, PostgreSQL, Vercel.",
+            "Implémentation d'interfaces front-end en React et TypeScript, avec Material UI / Joy UI pour des interfaces cohérentes et ergonomiques.",
+          fineticDescription3:
+            "Conception et développement du back-end et des API REST avec Python/Django.",
+          fineticDescription4:
+            "Modélisation et gestion des données avec une base PostgreSQL.",
+          fineticDescription5:
+            "Participation aux revues de code et aux workflows CI/CD via GitHub et Vercel, garantissant qualité et stabilité des déploiements.",
           tripalioTitle:
             "Stagiaire développeur backend chez <title>Tripalio</title>",
           tripalioPeriod: "Mai 2023 - Juillet 2023",

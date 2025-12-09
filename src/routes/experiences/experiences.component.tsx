@@ -10,7 +10,13 @@ const experiences: TabData[] = [
     title: "fineticTitle",
     period: "fineticPeriod",
     link: "https://www.finetic.eu",
-    description: ["fineticDescription1", "fineticDescription2"],
+    description: [
+      "fineticDescription1",
+      "fineticDescription2",
+      "fineticDescription3",
+      "fineticDescription4",
+      "fineticDescription5",
+    ],
   },
   {
     id: 2,
