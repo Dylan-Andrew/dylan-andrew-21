@@ -8,7 +8,7 @@ import {
   Button,
   useTheme,
 } from "@mui/material";
-import { SportsEsports } from "@mui/icons-material";
+import { Download, SportsEsports } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { Project } from "../../types/project";
 
@@ -176,7 +176,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <Button
             onClick={() => window.open(project.link, "_blank")}
             variant="contained"
-            startIcon={<SportsEsports />}
+            startIcon={project.linkLabelKey === "downloadOnItch" ? <Download /> : <SportsEsports />}
             sx={{
               textTransform: "none",
               fontWeight: 600,

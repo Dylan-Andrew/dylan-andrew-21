@@ -49,6 +49,7 @@ const projects: Project[] = [
     techStack: ["Unity", "C#"],
     highlights: ["windletonHighlight1"],
     link: "https://cheshirethegreatest.itch.io/windleton",
+    linkLabelKey: "downloadOnItch",
   },
   {
     id: "ascension",
