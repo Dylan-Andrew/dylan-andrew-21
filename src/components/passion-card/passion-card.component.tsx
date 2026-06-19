@@ -40,12 +40,12 @@ const PassionCard = ({
     <Card
       sx={{
         height: "100%",
-        transition: "all 0.3s ease",
+        borderRadius: 3,
         "&:hover": {
-          transform: "scale(1.02)",
-          boxShadow: 3,
+          transform: "translateY(-4px)",
+          borderColor: "rgba(129, 140, 248, 0.3)",
+          boxShadow: "0 8px 30px rgba(129, 140, 248, 0.1)",
         },
-        borderRadius: 5,
       }}
     >
       <CardContent sx={{ p: 3 }}>
@@ -91,7 +91,7 @@ const PassionCard = ({
                   variant="outlined"
                   sx={{
                     p: 2,
-                    borderRadius: 5,
+                    borderRadius: 3,
                     height: 100,
                     display: "flex",
                     flexDirection: "column",

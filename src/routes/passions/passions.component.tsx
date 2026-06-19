@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import PassionCard from "../../components/passion-card/passion-card.component";
 import f1Icon from "../../assets/f1.svg";
 import dotaIcon from "../../assets/dota.svg";
@@ -6,6 +6,7 @@ import {
   CalendarMonthOutlined,
   EmojiEventsOutlined,
   FavoriteBorderOutlined,
+  FormatQuote,
   LocationOnOutlined,
   PersonOutlineOutlined,
   SportsMotorsportsOutlined,
@@ -15,6 +16,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const Passions = () => {
+  const theme = useTheme();
   const { t } = useTranslation();
   return (
     <Box
@@ -31,19 +33,75 @@ const Passions = () => {
         variant="h2"
         component="h1"
         sx={{
-          marginBottom: "32px",
+          marginBottom: "24px",
           fontSize: {
             xs: "32px",
             md: "48px",
           },
           textAlign: "center",
+          background: `linear-gradient(135deg, ${theme.palette.primary.contrastText}, #38bdf8)`,
+          backgroundClip: "text",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
         }}
       >
         {t("passionTitle")}
       </Typography>
-      <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
-        {t("passionTitleDescription")}
+
+      <Box
+        sx={{
+          maxWidth: 700,
+          textAlign: "center",
+          mb: 4,
+          position: "relative",
+          px: 4,
+        }}
+      >
+        <FormatQuote
+          sx={{
+            position: "absolute",
+            top: -10,
+            left: 0,
+            fontSize: 40,
+            color: theme.palette.primary.contrastText,
+            opacity: 0.3,
+            transform: "scaleX(-1)",
+          }}
+        />
+        <Typography
+          variant="h6"
+          sx={{
+            fontStyle: "italic",
+            lineHeight: 1.8,
+            fontWeight: 400,
+            color: "text.secondary",
+          }}
+        >
+          {t("passionTitleDescription")}
+        </Typography>
+        <FormatQuote
+          sx={{
+            position: "absolute",
+            bottom: -10,
+            right: 0,
+            fontSize: 40,
+            color: theme.palette.primary.contrastText,
+            opacity: 0.3,
+          }}
+        />
+      </Box>
+
+      <Typography
+        variant="body1"
+        sx={{
+          mb: 5,
+          fontWeight: 600,
+          color: theme.palette.primary.contrastText,
+        }}
+      >
+        - Dylan Andrew
       </Typography>
+
       <Grid container spacing={5}>
         <Grid size={{ xs: 12, md: 6 }}>
           <PassionCard
@@ -112,24 +170,6 @@ const Passions = () => {
           />
         </Grid>
       </Grid>
-      <Card
-        variant="outlined"
-        sx={{
-          mt: 4,
-          p: 3,
-          maxWidth: "600px",
-          textAlign: "center",
-          backgroundColor: "background.default",
-          borderRadius: 5,
-        }}
-      >
-        <Typography variant="body2" color="text.secondary">
-          {t("dylanAndrewQuote")}
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 2 }}>
-          - Dylan Andrew
-        </Typography>
-      </Card>
     </Box>
   );
 };
