@@ -6,7 +6,7 @@ import myself from "../../assets/DylanAndrew.jpg";
 const skillCategories = [
   {
     labelKey: "skillsFrontend",
-    skills: ["React", "TypeScript", "React Native", "Material UI"],
+    skills: ["React", "TypeScript", "Material UI"],
   },
   {
     labelKey: "skillsBackend",
