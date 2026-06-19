@@ -21,6 +21,7 @@ const NavButton = ({ page }: { page: Page }) => {
         color: "text.primary",
         boxShadow: "none",
         "&:hover": {
+          backgroundColor: "transparent",
           color: theme.palette.primary.contrastText,
         },
       }}
