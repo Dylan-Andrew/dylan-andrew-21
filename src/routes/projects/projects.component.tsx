@@ -3,12 +3,21 @@ import { useTranslation } from "react-i18next";
 import ProjectCard from "../../components/project-card/project-card.component";
 import { Project } from "../../types/project";
 
+import schoolMgmtImg from "../../assets/projects/school-management.png";
+import liveRateImg from "../../assets/projects/liverate-trader.png";
+import f1CompanionImg from "../../assets/projects/f1-companion.png";
+import windletonImg from "../../assets/projects/windleton.png";
+import ascensionImg from "../../assets/projects/ascension.png";
+import findingGilbertImg from "../../assets/projects/finding-gilbert.png";
+import vrEffondrementImg from "../../assets/projects/vr-effondrement.png";
+
 const projects: Project[] = [
   {
     id: "school-mgmt",
     titleKey: "schoolMgmtTitle",
     descriptionKey: "schoolMgmtDescription",
     type: "web",
+    image: schoolMgmtImg,
     techStack: ["React 19", "TypeScript", "Django 5.2", "DRF", "PostgreSQL", "Docker", "MUI"],
     highlights: [
       "schoolMgmtHighlight1",
@@ -22,6 +31,7 @@ const projects: Project[] = [
     titleKey: "liveRateTitle",
     descriptionKey: "liveRateDescription",
     type: "web",
+    image: liveRateImg,
     techStack: ["React 19", "TypeScript", "FastAPI", "PostgreSQL", "WebSocket", "Zustand"],
     highlights: [
       "liveRateHighlight1",
@@ -34,6 +44,7 @@ const projects: Project[] = [
     titleKey: "f1CompanionTitle",
     descriptionKey: "f1CompanionDescription",
     type: "web",
+    image: f1CompanionImg,
     techStack: ["React", "TypeScript", "Expo SDK 56", "SignalR", "i18next"],
     highlights: [
       "f1CompanionHighlight1",
@@ -46,6 +57,7 @@ const projects: Project[] = [
     titleKey: "windletonTitle",
     descriptionKey: "windletonDescription",
     type: "game",
+    image: windletonImg,
     techStack: ["Unity", "C#"],
     highlights: ["windletonHighlight1"],
     link: "https://cheshirethegreatest.itch.io/windleton",
@@ -56,6 +68,7 @@ const projects: Project[] = [
     titleKey: "ascensionTitle",
     descriptionKey: "ascensionDescription",
     type: "game",
+    image: ascensionImg,
     techStack: ["Unity", "C#"],
     highlights: ["ascensionHighlight1"],
     link: "https://dylanandrew.itch.io/ascension",
@@ -65,6 +78,7 @@ const projects: Project[] = [
     titleKey: "findingGilbertTitle",
     descriptionKey: "findingGilbertDescription",
     type: "game",
+    image: findingGilbertImg,
     techStack: ["Unity", "C#"],
     highlights: ["findingGilbertHighlight1"],
     link: "https://dylanandrew.itch.io/finding-gilbert",
@@ -74,6 +88,7 @@ const projects: Project[] = [
     titleKey: "vrEffondrementTitle",
     descriptionKey: "vrEffondrementDescription",
     type: "game",
+    image: vrEffondrementImg,
     techStack: ["Unity", "C#", "VR"],
     highlights: ["vrEffondrementHighlight1"],
     link: "https://toinoncoding.itch.io/vr-effondrement",
