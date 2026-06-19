@@ -1,16 +1,29 @@
-import { Box, Grid, Link, List, Typography, useTheme } from "@mui/material";
-import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
+import { Box, Chip, Grid, Link, Typography, useTheme } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
 
 import myself from "../../assets/DylanAndrew.jpg";
 
-const technologies = [
-  "JavaScript",
-  "TypeScript",
-  "React.js",
-  "Python",
-  "Git",
-  "Unity",
+const skillCategories = [
+  {
+    labelKey: "skillsFrontend",
+    skills: ["React", "TypeScript", "React Native", "Material UI"],
+  },
+  {
+    labelKey: "skillsBackend",
+    skills: ["Python", "Django / DRF", "FastAPI", "PHP"],
+  },
+  {
+    labelKey: "skillsDatabase",
+    skills: ["PostgreSQL", "MySQL"],
+  },
+  {
+    labelKey: "skillsDevOps",
+    skills: ["Docker", "Git", "CI/CD", "Pytest", "Jest"],
+  },
+  {
+    labelKey: "skillsGameDev",
+    skills: ["Unity", "C#"],
+  },
 ];
 
 const About = () => {
@@ -47,22 +60,6 @@ const About = () => {
             <Trans
               i18nKey="aboutDescription1"
               components={{
-                finetic: (
-                  <Link
-                    href="https://www.finetic.eu"
-                    color={theme.palette.primary.contrastText}
-                    underline="hover"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ),
-              }}
-            ></Trans>
-          </Typography>
-          <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
-            <Trans
-              i18nKey="aboutDescription2"
-              components={{
                 university: (
                   <Link
                     href={`https://www.esiee-it.fr/${t("languageCode")}`}
@@ -73,32 +70,66 @@ const About = () => {
                   />
                 ),
               }}
-            ></Trans>
+            />
           </Typography>
           <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
+            <Trans
+              i18nKey="aboutDescription2"
+              components={{
+                finetic: (
+                  <Link
+                    href="https://www.finetic.eu"
+                    color={theme.palette.primary.contrastText}
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                ),
+              }}
+            />
+          </Typography>
+          <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
+            {t("aboutDescription3")}
+          </Typography>
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{ marginTop: "24px", marginBottom: "16px" }}
+          >
             {t("technologiesIntroduction")}
           </Typography>
-          <List>
-            <Grid container spacing={2}>
-              {technologies.map((technology) => (
-                <Grid size={{ xs: 12, sm: 6 }} key={technology}>
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <PlayArrowOutlinedIcon
-                      sx={{
-                        color: theme.palette.primary.contrastText,
-                        marginRight: "8px",
-                      }}
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+            {skillCategories.map((category) => (
+              <Box key={category.labelKey}>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: theme.palette.primary.contrastText,
+                    fontWeight: 600,
+                    mb: 1,
+                    fontSize: "0.85rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  {t(category.labelKey)}
+                </Typography>
+                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                  {category.skills.map((skill) => (
+                    <Chip
+                      key={skill}
+                      label={skill}
+                      variant="outlined"
+                      size="small"
+                      sx={{ fontSize: "0.8rem" }}
                     />
-                    <Typography variant="h6" component="li">
-                      {technology}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </List>
+                  ))}
+                </Box>
+              </Box>
+            ))}
+          </Box>
           <Typography variant="h6" component="p" sx={{ marginTop: "32px" }}>
-            {t("aboutDescription3")}
+            {t("aboutDescription4")}
           </Typography>
         </Grid>
         <Grid
