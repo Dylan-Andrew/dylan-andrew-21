@@ -5,6 +5,7 @@ import Home from "./routes/home/home.component";
 import About from "./routes/about/about.component";
 import Experiences from "./routes/experiences/experiences.component";
 import Passions from "./routes/passions/passions.component";
+import Projects from "./routes/projects/projects.component";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="experiences" element={<Experiences />} />
+        <Route path="projects" element={<Projects />} />
         <Route path="passions" element={<Passions />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Route>
