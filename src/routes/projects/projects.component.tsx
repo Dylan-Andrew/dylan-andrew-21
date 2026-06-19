@@ -33,8 +33,8 @@ const projects: Project[] = [
     id: "f1-companion",
     titleKey: "f1CompanionTitle",
     descriptionKey: "f1CompanionDescription",
-    type: "mobile",
-    techStack: ["React Native", "Expo SDK 56", "TypeScript", "SignalR", "i18next"],
+    type: "web",
+    techStack: ["React", "TypeScript", "Expo SDK 56", "SignalR", "i18next"],
     highlights: [
       "f1CompanionHighlight1",
       "f1CompanionHighlight2",

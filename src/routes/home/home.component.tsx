@@ -31,8 +31,8 @@ const featuredProjects = [
   {
     titleKey: "f1CompanionTitle",
     descriptionKey: "f1CompanionHighlight1",
-    typeKey: "projectTypeMobile",
-    typeColor: "#38bdf8",
+    typeKey: "projectTypeWeb",
+    typeColor: "#818cf8",
     techStack: ["React Native", "Expo", "SignalR"],
   },
 ];

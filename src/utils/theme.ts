@@ -38,8 +38,10 @@ const theme = createTheme({
       styleOverrides: {
         contained: {
           backgroundColor: "#818cf8",
+          color: "#0b1120",
           "&:hover": {
             backgroundColor: "#6366f1",
+            color: "#0b1120",
           },
         },
       },
