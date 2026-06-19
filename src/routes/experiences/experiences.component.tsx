@@ -16,6 +16,7 @@ const experiences: TabData[] = [
       "fineticDescription3",
       "fineticDescription4",
       "fineticDescription5",
+      "fineticDescription6",
     ],
   },
   {
@@ -24,7 +25,7 @@ const experiences: TabData[] = [
     title: "tripalioTitle",
     period: "tripalioPeriod",
     link: "https://app.tripalio.fr/",
-    description: ["tripalioDescription1"],
+    description: ["tripalioDescription1", "tripalioDescription2", "tripalioDescription3"],
   },
   {
     id: 3,

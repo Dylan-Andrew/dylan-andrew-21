@@ -30,13 +30,13 @@ i18n
           home: "Home",
           language: "Change Language",
           aboutDescription1:
-            "Fullstack developer with a Master's degree in Computer Science from <university>ESIEE-IT</university>, graduated in 2025.",
+            "Fullstack developer with a Master's degree in IT Engineering from <university>ESIEE-IT</university> (specialization in VR & Game Development), graduated in 2025.",
           aboutDescription2:
-            "Previously the main developer at <finetic>Finetic</finetic>, a financial consulting firm, where I was in charge of building a SaaS business planning tool for 2 years.",
+            "For 2 years, I was the main developer at <finetic>Finetic</finetic>, a financial consulting firm, where I was in charge of most of the daily development on a SaaS business planning tool — from UI design to REST API architecture.",
           aboutDescription3:
-            "I love learning new domains through code. At Finetic, I dove deep into finance to understand business needs, and I built a school management system now used daily by a real school.",
+            "I thrive on learning new domains through code. At Finetic, I dove deep into finance to truly understand the business needs, and I loved every bit of it. Since graduating, I've been building a school management system now used daily by a real school, alongside personal projects in trading and Formula 1.",
           aboutDescription4:
-            "Outside of work, I'm passionate about Formula 1, enjoy playing a lot of Dota 2, love cooking, and I'm curious about science and new technologies.",
+            "Autonomous, curious, and driven to always give my best — whether it's picking up a new technology, understanding a new business domain, or pushing a side project to production. Outside of code, I'm passionate about Formula 1, Dota 2, cooking, and science.",
           technologiesIntroduction:
             "Technologies I work with:",
           skillsFrontend: "Frontend",
@@ -48,29 +48,35 @@ i18n
           fineticTitle: "Fullstack Developer @ <title>Finetic</title>",
           fineticPeriod: "September 2023 - October 2025",
           fineticDescription1:
-            "Main developer on a custom SaaS web application that streamlines the creation and editing of business plans.",
+            "Main developer on a SaaS business planning tool, in charge of most of the daily development across the full stack.",
           fineticDescription2:
-            "Developed the complete front-end with React and TypeScript, using Material UI / Joy UI for clean, consistent interfaces.",
+            "Built the complete front-end: dashboards, data exports, and business interfaces with React, TypeScript, and Material UI / Joy UI.",
           fineticDescription3:
-            "Designed and implemented backend logic and REST APIs with Python/Django.",
+            "Designed and developed REST APIs and backend logic with Python/Django, handling complex financial modeling.",
           fineticDescription4:
-            "Managed database interactions with PostgreSQL, optimizing data retrieval and storage.",
+            "Modeled and optimized the PostgreSQL database for performance and data integrity.",
           fineticDescription5:
-            "Participated in code reviews and CI/CD workflows using GitHub and Vercel, ensuring code quality and smooth deployments.",
-          tripalioTitle: "Backend Developer @ <title>Tripalio</title>",
+            "Wrote tests (Pytest, Jest), maintained technical documentation, and collaborated in Agile/Scrum with product, design, and business teams.",
+          fineticDescription6:
+            "Learned the finance domain in depth to understand business requirements and deliver features that truly matched client needs.",
+          tripalioTitle: "C# Developer @ <title>Tripalio</title>",
           tripalioPeriod: "May 2023 - July 2023",
           tripalioDescription1:
-            "Worked on an insurance web application, focusing on backend development using C#.",
+            "Extended database features and maintained a recruitment platform in C#.",
+          tripalioDescription2:
+            "Diagnosed and resolved backend bugs in production.",
+          tripalioDescription3:
+            "Delivered front-end updates in HTML/CSS.",
           sahazaGroupTitle: "Web Developer @ <title>Sahaza Group</title>",
           sahazaGroupPeriod: "April 2020 - May 2022",
           sahazaGroupDescription1:
-            "Worked on e-commerce sites using Prestashop",
+            "Built and maintained e-commerce sites with WordPress and PrestaShop, including custom development in HTML, CSS, JavaScript, and PHP.",
           sahazaGroupDescription2:
-            "Developed a website for the <fea>women entrepreneurs of Analamanga</fea> using WordPress",
+            "Developed a custom PrestaShop module tailored to a client's specific needs.",
           sahazaGroupDescription3:
-            "Developed an intranet site for the Sahaza Group using Drupal",
+            "Built an intranet site for the Sahaza Group using Drupal 8.",
           sahazaGroupDescription4:
-            "Played a key role in the development of <recruter>recruter-a-madagascar.com</recruter>",
+            "Delivered responsive web integration across all projects.",
           passionTitle: "My Passions",
           passionTitleDescription:
             "Whether it's the precision of an F1 lap or the perfect team fight in Dota, I'm drawn to pursuits that demand excellence, strategy, and relentless improvement.",
@@ -151,13 +157,13 @@ i18n
           home: "Accueil",
           language: "Changer de langue",
           aboutDescription1:
-            "Développeur fullstack diplômé d'un Master en informatique à l'<university>ESIEE-IT</university> en 2025.",
+            "Développeur fullstack diplômé d'un Master Manager en Ingénierie Informatique à l'<university>ESIEE-IT</university> en 2025, spécialisation VR et Jeux Vidéo.",
           aboutDescription2:
-            "Précédemment développeur principal chez <finetic>Finetic</finetic>, un cabinet de conseil financier, où j'étais en charge du développement d'un outil SaaS de business planning pendant 2 ans.",
+            "Pendant 2 ans, j'étais développeur principal chez <finetic>Finetic</finetic>, un cabinet de conseil financier, en charge de l'essentiel du développement quotidien d'un outil SaaS de business planning — du design UI à l'architecture des API REST.",
           aboutDescription3:
-            "J'aime apprendre de nouveaux domaines à travers le code. Chez Finetic, j'ai plongé dans la finance pour comprendre les besoins métier, et j'ai développé un système de gestion scolaire aujourd'hui utilisé au quotidien par une vraie école.",
+            "J'aime apprendre de nouveaux domaines à travers le code. Chez Finetic, j'ai plongé dans la finance pour vraiment comprendre les besoins métier, et j'ai adoré. Depuis l'obtention de mon diplôme, je développe un système de gestion scolaire utilisé au quotidien par une vraie école, en parallèle de projets personnels en trading et Formule 1.",
           aboutDescription4:
-            "En dehors du travail, je suis passionné par la Formule 1, je joue beaucoup à Dota 2, j'aime cuisiner, et je m'intéresse à la science et aux nouvelles technologies.",
+            "Autonome, curieux, et motivé à toujours donner le meilleur de moi-même — que ce soit pour apprendre une nouvelle technologie, comprendre un nouveau domaine métier, ou pousser un projet perso jusqu'en production. En dehors du code, je suis passionné par la Formule 1, Dota 2, la cuisine et la science.",
           technologiesIntroduction:
             "Technologies avec lesquelles je travaille :",
           skillsFrontend: "Frontend",
@@ -169,30 +175,36 @@ i18n
           fineticTitle: "Développeur Fullstack @ <title>Finetic</title>",
           fineticPeriod: "Septembre 2023 - Octobre 2025",
           fineticDescription1:
-            "Développeur principal d'une application web SaaS sur mesure facilitant la création et l'édition de business plans.",
+            "Développeur principal d'un outil SaaS de business planning, en charge de l'essentiel du développement quotidien sur l'ensemble de la stack.",
           fineticDescription2:
-            "Développement du front-end complet en React et TypeScript, avec Material UI / Joy UI pour des interfaces cohérentes et ergonomiques.",
+            "Développement du front-end complet : dashboards, exports de données et interfaces métier avec React, TypeScript et Material UI / Joy UI.",
           fineticDescription3:
-            "Conception et développement du back-end et des API REST avec Python/Django.",
+            "Conception et développement des API REST et de la logique back-end avec Python/Django, incluant de la modélisation financière complexe.",
           fineticDescription4:
-            "Modélisation et gestion des données avec une base PostgreSQL.",
+            "Modélisation et optimisation de la base de données PostgreSQL pour la performance et l'intégrité des données.",
           fineticDescription5:
-            "Participation aux revues de code et aux workflows CI/CD via GitHub et Vercel, garantissant qualité et stabilité des déploiements.",
+            "Rédaction de tests (Pytest, Jest), documentation technique, et collaboration en Agile/Scrum avec les équipes produit, design et business.",
+          fineticDescription6:
+            "Apprentissage approfondi du domaine financier pour comprendre les besoins métier et livrer des fonctionnalités adaptées aux attentes clients.",
           tripalioTitle:
-            "Développeur Backend @ <title>Tripalio</title>",
+            "Développeur C# @ <title>Tripalio</title>",
           tripalioPeriod: "Mai 2023 - Juillet 2023",
           tripalioDescription1:
-            "J'ai travaillé sur une application web d'assurance, en me concentrant sur le développement backend en C#.",
+            "Extension des fonctionnalités base de données et maintenance d'une plateforme de recrutement en C#.",
+          tripalioDescription2:
+            "Diagnostic et résolution de bugs backend en production.",
+          tripalioDescription3:
+            "Mises à jour front-end en HTML/CSS.",
           sahazaGroupTitle: "Développeur Web @ <title>Sahaza Group</title>",
           sahazaGroupPeriod: "Avril 2020 - Mai 2022",
           sahazaGroupDescription1:
-            "J'ai travaillé sur des sites e-commerce utilisant Prestashop",
+            "Création et maintenance de sites web sous WordPress et PrestaShop, avec développement spécifique en HTML, CSS, JavaScript et PHP.",
           sahazaGroupDescription2:
-            "J'ai développé un site web pour les <fea>femmes entrepreneurs d'Analamanga</fea> en utilisant WordPress",
+            "Réalisation d'un module PrestaShop sur mesure pour un client.",
           sahazaGroupDescription3:
-            "J'ai développé un site intranet pour le Sahaza Group en utilisant Drupal",
+            "Développement d'un site intranet pour le Sahaza Group avec Drupal 8.",
           sahazaGroupDescription4:
-            "J'ai joué un rôle clé dans le développement de <recruter>recruter-a-madagascar.com</recruter>",
+            "Intégration web responsive sur l'ensemble des projets.",
           passionTitle: "Mes Passions",
           passionTitleDescription:
             "Que ce soit la précision d'un tour en F1 ou la coordination parfaite d'une équipe dans Dota, je suis attiré par les défis qui exigent excellence, stratégie et amélioration continue.",
