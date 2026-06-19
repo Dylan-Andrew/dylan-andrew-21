@@ -11,7 +11,10 @@ import {
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { TypeAnimation } from "react-type-animation";
-import Footer from "../../components/footer/footer.component";
+
+import schoolMgmtImg from "../../assets/projects/school-management.png";
+import liveRateImg from "../../assets/projects/liverate-trader.png";
+import f1CompanionImg from "../../assets/projects/f1-companion.png";
 
 const featuredProjects = [
   {
@@ -20,6 +23,7 @@ const featuredProjects = [
     typeKey: "projectTypeWeb",
     typeColor: "#818cf8",
     techStack: ["React", "Django", "PostgreSQL"],
+    image: schoolMgmtImg,
   },
   {
     titleKey: "liveRateTitle",
@@ -27,13 +31,15 @@ const featuredProjects = [
     typeKey: "projectTypeWeb",
     typeColor: "#818cf8",
     techStack: ["React", "FastAPI", "WebSocket"],
+    image: liveRateImg,
   },
   {
     titleKey: "f1CompanionTitle",
     descriptionKey: "f1CompanionHighlight1",
     typeKey: "projectTypeWeb",
     typeColor: "#818cf8",
-    techStack: ["React Native", "Expo", "SignalR"],
+    techStack: ["React", "Expo", "SignalR"],
+    image: f1CompanionImg,
   },
 ];
 
@@ -180,6 +186,7 @@ const Home = () => {
                   color: "inherit",
                   cursor: "pointer",
                   borderRadius: 3,
+                  overflow: "hidden",
                   "&:hover": {
                     transform: "translateY(-4px)",
                     borderColor: "rgba(129, 140, 248, 0.3)",
@@ -187,6 +194,17 @@ const Home = () => {
                   },
                 }}
               >
+                <Box
+                  component="img"
+                  src={project.image}
+                  alt={t(project.titleKey)}
+                  sx={{
+                    width: "100%",
+                    height: 140,
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
                 <CardContent sx={{ p: 2.5 }}>
                   <Box
                     sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}
@@ -230,7 +248,6 @@ const Home = () => {
         </Grid>
       </Box>
 
-      <Footer />
     </Box>
   );
 };
