@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local design context and tooling (not for the public repo)
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.claude/
+
+# Original full-size source images, kept locally; the site ships optimized copies
+_sources/
