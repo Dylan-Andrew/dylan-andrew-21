@@ -119,3 +119,10 @@
     transition: none;
   }
 }
+
+/* Stacked timeline: the hero's stroke turns in above the first stop, so give it room. */
+@media (max-width: 960px) {
+  .stroke--lead {
+    padding-top: 8rem;
+  }
+}

@@ -30,12 +30,31 @@ const HeroStroke = () => {
       const endY = sb.top - hb.top + headY;
       const h = Math.max(endY, startY) + 12;
       setSize({ w, h });
-      if (window.innerWidth <= 960) {
+      // Read the real layout rather than a viewport width, so the path can never
+      // disagree with the grid's breakpoint: stacked means the portrait no longer
+      // sits beside the text column.
+      const stacked = pb.left - hb.left < hb.width / 3;
+      if (stacked) {
         // Single column: run down the page margin beside the portrait and the heading,
         // clear of the text, then turn into the timeline's first stop.
         const x = Math.max(4, (pb.left - hb.left) / 2);
         const top = pb.top - hb.top + 24;
         setD(`M ${x} ${top} L ${x} ${endY - 64} C ${x} ${endY - 26}, ${endX} ${endY - 40}, ${endX} ${endY}`);
+        return;
+      }
+      // When the timeline's heading and intro stack above it (narrow two-column hero),
+      // a direct sweep would cut through them: drop down clear of the text first,
+      // then turn into the timeline below it.
+      const aside = document.querySelector(".split__aside");
+      const ab = aside?.getBoundingClientRect();
+      if (aside && ab && ab.bottom <= sb.top + 1) {
+        const range = document.createRange();
+        range.selectNodeContents(aside);
+        const textRight = Math.max(...Array.from(range.getClientRects(), (r) => r.right)) - hb.left;
+        const x = Math.min(Math.max(startX, textRight + 32), pb.right - hb.left - 12);
+        const turnY = ab.bottom - hb.top + 16;
+        const k = (endY - turnY) * 0.6;
+        setD(`M ${x} ${startY} L ${x} ${turnY} C ${x} ${turnY + k}, ${endX} ${endY - k}, ${endX} ${endY}`);
         return;
       }
       const midY = startY + (endY - startY) * 0.55;
@@ -49,6 +68,8 @@ const HeroStroke = () => {
     if (hero) ro.observe(hero);
     const strokeEl = document.querySelector(".stroke");
     if (strokeEl) ro.observe(strokeEl);
+    const asideEl = document.querySelector(".split__aside");
+    if (asideEl) ro.observe(asideEl);
     document.fonts?.ready.then(measure);
     window.addEventListener("resize", measure);
     return () => {

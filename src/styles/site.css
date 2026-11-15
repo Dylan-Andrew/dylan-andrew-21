@@ -371,7 +371,7 @@
   stroke-width: 3;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 860px) {
   .hero-stroke__ink {
     stroke-width: 6;
   }
