@@ -1,25 +1,27 @@
-import { Routes, Route } from "react-router";
-import "./App.css";
-import Navigation from "./routes/navigation/navigation.component";
+import { lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./routes/navigation/navigation.component";
 import Home from "./routes/home/home.component";
-import About from "./routes/about/about.component";
-import Experiences from "./routes/experiences/experiences.component";
-import Passions from "./routes/passions/passions.component";
-import Projects from "./routes/projects/projects.component";
 
-const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="experiences" element={<Experiences />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="passions" element={<Passions />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
-      </Route>
-    </Routes>
-  );
-};
+const About = lazy(() => import("./routes/about/about.component"));
+const Experiences = lazy(() => import("./routes/experiences/experiences.component"));
+const Projects = lazy(() => import("./routes/projects/projects.component"));
+const Passions = lazy(() => import("./routes/passions/passions.component"));
+const NotFound = lazy(() => import("./routes/not-found/not-found.component"));
+
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="experiences" element={<Experiences />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="passions" element={<Passions />} />
+    </Route>
+    <Route element={<Layout showSignOff={false} />}>
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  </Routes>
+);
 
 export default App;

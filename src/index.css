@@ -1,0 +1,126 @@
+/* Signature Stroke tokens. Colours come from the drawn 21st mark (ink, graphite, red)
+   plus two supporting colours taken from the portrait: cobalt (sky) and garden green (lawn). */
+:root {
+  --paper: #ffffff;
+  --mist: #f2f3f1;
+  --rule: #e3e4e2;
+  --ink: #0b0e0d;
+  --graphite: #5c5e61;
+  --red: #c40e1a;
+  --cobalt: #2346c9;
+  --green: #1f7a4d;
+
+  /* On ink fields */
+  --on-ink: #ffffff;
+  --on-ink-muted: #a7a9ab;
+  --on-ink-rule: #2a2d2c;
+  --red-on-ink: #ff5a5f;
+  --cobalt-on-ink: #8fa6ff;
+  --green-on-ink: #5fd39a;
+
+  --font: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+
+  --gutter: clamp(1rem, 4vw, 4.5rem);
+  --max: 82rem;
+  --measure: 68ch;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-optical-sizing: auto;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.ink-field :focus-visible {
+  outline-color: var(--cobalt-on-ink);
+}
+
+a {
+  color: var(--cobalt);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  z-index: 2000;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+html {
+  scrollbar-color: var(--graphite) var(--mist);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

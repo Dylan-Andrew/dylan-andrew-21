@@ -1,254 +1,140 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  Grid,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
-import { TypeAnimation } from "react-type-animation";
+import ArrowForwardRounded from "@mui/icons-material/ArrowForwardRounded";
 
-import schoolMgmtImg from "../../assets/projects/school-management.png";
-import liveRateImg from "../../assets/projects/liverate-trader.png";
-import f1CompanionImg from "../../assets/projects/f1-companion.png";
-
-const featuredProjects = [
-  {
-    titleKey: "schoolMgmtTitle",
-    descriptionKey: "schoolMgmtHighlight1",
-    typeKey: "projectTypeWeb",
-    typeColor: "#818cf8",
-    techStack: ["React", "Django", "PostgreSQL"],
-    image: schoolMgmtImg,
-  },
-  {
-    titleKey: "liveRateTitle",
-    descriptionKey: "liveRateHighlight1",
-    typeKey: "projectTypeWeb",
-    typeColor: "#818cf8",
-    techStack: ["React", "FastAPI", "WebSocket"],
-    image: liveRateImg,
-  },
-  {
-    titleKey: "f1CompanionTitle",
-    descriptionKey: "f1CompanionHighlight1",
-    typeKey: "projectTypeWeb",
-    typeColor: "#818cf8",
-    techStack: ["React", "Expo", "SignalR"],
-    image: f1CompanionImg,
-  },
-];
+import portrait from "../../assets/brand/portrait.webp";
+import SignatureStroke, { StrokeStop } from "../../components/signature-stroke/signature-stroke.component";
+import HeroStroke from "../../components/signature-stroke/hero-stroke.component";
+import { contact, work } from "../../data/work";
 
 const Home = () => {
-  const theme = useTheme();
   const { t } = useTranslation();
+
+  const stops: StrokeStop[] = [
+    { id: "sahaza", when: "2020–22", label: `Sahaza Group · ${t("stopSahazaDomain")}`, children: <p>{t("stopSahazaText")}</p> },
+    { id: "tripalio", when: "2023", label: `Tripalio · ${t("stopTripalioDomain")}`, children: <p>{t("stopTripalioText")}</p> },
+    { id: "finetic", when: "2023–25", label: `Finetic · ${t("stopFineticDomain")}`, children: <p>{t("stopFineticText")}</p> },
+    { id: "esiee", when: "2025", label: `ESIEE-IT · ${t("stopEsieeDomain")}`, children: <p>{t("stopEsieeText")}</p> },
+    {
+      id: "now",
+      when: t("now"),
+      label: t("stopNowDomain"),
+      isNow: true,
+      children: (
+        <>
+          <p>{t("stopNowText")}</p>
+          <p>
+            <Link className="arrow-link" to="/projects?p=school-management">
+              {t("viewProject", { name: t("schoolMgmtTitle") })}
+              <ArrowForwardRounded fontSize="small" aria-hidden="true" />
+            </Link>
+          </p>
+        </>
+      ),
+    },
+  ];
+
+  const school = work.find((w) => w.id === "school-management")!;
+  const explorations = work.filter((w) => w.group === "explorations");
+  const finetic = work.find((w) => w.id === "finetic-saas")!;
+
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        my: "10px",
-        mx: { xs: "20px", sm: "50px" },
-      }}
-    >
-      <Box
-        sx={{
-          minHeight: { xs: "50vh", md: "60vh" },
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          mb: 6,
-        }}
-      >
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{
-            marginBottom: "16px",
-            fontSize: {
-              xs: "32px",
-              sm: "48px",
-              md: "64px",
-            },
-          }}
-        >
-          <TypeAnimation
-            key={t("welcome")}
-            sequence={[t("welcome")]}
-            wrapper="span"
-            speed={21}
-            style={{
-              color: theme.palette.primary.contrastText,
-            }}
-          />
-        </Typography>
-        <Typography
-          variant="h4"
-          component="p"
-          sx={{
-            marginBottom: "8px",
-            fontWeight: 700,
-            fontSize: {
-              xs: "24px",
-              md: "36px",
-            },
-          }}
-        >
-          {t("homeDescription1")}
-        </Typography>
-        <Typography
-          variant="h6"
-          component="p"
-          color="text.secondary"
-          sx={{
-            marginBottom: "32px",
-            fontWeight: 400,
-            fontSize: {
-              xs: "14px",
-              md: "18px",
-            },
-          }}
-        >
-          {t("homeDescription2")}
-        </Typography>
-        <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
-          <Button
-            component={Link}
-            to="/projects"
-            variant="contained"
-            sx={{
-              textTransform: "none",
-              fontWeight: 600,
-              px: 4,
-              py: 1.5,
-              fontSize: "16px",
-              borderRadius: 2,
-            }}
-          >
-            {t("homeButton")}
-          </Button>
-          <Button
-            component={Link}
-            to="/about"
-            variant="outlined"
-            sx={{
-              textTransform: "none",
-              fontWeight: 600,
-              px: 4,
-              py: 1.5,
-              fontSize: "16px",
-              borderRadius: 2,
-              borderColor: "rgba(148, 163, 184, 0.3)",
-              color: "text.primary",
-              "&:hover": {
-                borderColor: theme.palette.primary.contrastText,
-                color: theme.palette.primary.contrastText,
-              },
-            }}
-          >
-            {t("homeAboutButton")}
-          </Button>
-        </Box>
-      </Box>
+    <>
+      <section className="wrap hero" aria-labelledby="hero-name">
+        <div className="hero__text">
+          <h1 className="display" id="hero-name">
+            Dylan
+            <br />
+            Andrew
+          </h1>
+          <p className="hero__line">{t("heroLine")}</p>
+          <p className="hero__role">{t("heroRole")}</p>
+          <div className="hero__actions">
+            <Link className="btn btn--solid" to="/projects">
+              {t("heroCtaWork")}
+            </Link>
+            <a className="text-link" href={contact.email}>
+              {t("heroCtaContact")}
+            </a>
+          </div>
+        </div>
+        <figure className="hero__portrait">
+          <img src={portrait} alt={t("portraitAlt")} width={900} height={1200} fetchPriority="high" />
+        </figure>
+        <HeroStroke />
+      </section>
 
-      <Box sx={{ width: "100%", maxWidth: 1200, mb: 6 }}>
-        <Typography
-          variant="h5"
-          sx={{
-            fontWeight: 700,
-            mb: 3,
-            textAlign: "center",
-            background: `linear-gradient(135deg, ${theme.palette.primary.contrastText}, #38bdf8)`,
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          {t("featuredWork")}
-        </Typography>
-        <Grid container spacing={3}>
-          {featuredProjects.map((project) => (
-            <Grid key={project.titleKey} size={{ xs: 12, md: 4 }}>
-              <Card
-                component={Link}
-                to="/projects"
-                sx={{
-                  height: "100%",
-                  textDecoration: "none",
-                  color: "inherit",
-                  cursor: "pointer",
-                  borderRadius: 3,
-                  overflow: "hidden",
-                  "&:hover": {
-                    transform: "translateY(-4px)",
-                    borderColor: "rgba(129, 140, 248, 0.3)",
-                    boxShadow: "0 8px 30px rgba(129, 140, 248, 0.1)",
-                  },
-                }}
-              >
-                <Box
-                  component="img"
-                  src={project.image}
-                  alt={t(project.titleKey)}
-                  sx={{
-                    width: "100%",
-                    height: 140,
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-                <CardContent sx={{ p: 2.5 }}>
-                  <Box
-                    sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}
-                  >
-                    <Chip
-                      label={t(project.typeKey)}
-                      size="small"
-                      sx={{
-                        backgroundColor: project.typeColor,
-                        color: "#0b1120",
-                        fontWeight: 600,
-                        fontSize: "0.7rem",
-                      }}
-                    />
-                  </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
-                    {t(project.titleKey)}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ mb: 2 }}
-                  >
-                    {t(project.descriptionKey)}
-                  </Typography>
-                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                    {project.techStack.map((tech) => (
-                      <Chip
-                        key={tech}
-                        label={tech}
-                        variant="outlined"
-                        size="small"
-                        sx={{ fontSize: "0.7rem", height: 24 }}
-                      />
-                    ))}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
+      <section className="section" aria-labelledby="timeline-title">
+        <div className="wrap split">
+          <div className="split__aside">
+            <h2 className="h2" id="timeline-title">
+              {t("timelineTitle")}
+            </h2>
+            <p className="lede">{t("timelineIntro")}</p>
+          </div>
+          <SignatureStroke stops={stops} labelledBy="timeline-title" lead />
+        </div>
+      </section>
 
-    </Box>
+      <section className="section ink-field" aria-labelledby="shipped-title">
+        <div className="wrap">
+          <h2 className="h2" id="shipped-title" style={{ marginBottom: "clamp(2rem, 5vw, 3.5rem)" }}>
+            {t("selectedWorkTitle")}
+          </h2>
+          <div className="feature">
+            <div>
+              <h3 className="h3">{t(school.titleKey)}</h3>
+              <dl className="meta">
+                <dt>{t("fieldDomain")}</dt>
+                <dd>{t(school.domainKey)}</dd>
+                <dt>{t("fieldYears")}</dt>
+                <dd>{school.years}</dd>
+                <dt>{t("fieldStatus")}</dt>
+                <dd>
+                  <span className="status status--live">{t(school.statusKey)}</span>
+                </dd>
+              </dl>
+              <p>{t("schoolMgmtHighlight1")}. {t("schoolMgmtHighlight2")}.</p>
+              <p style={{ marginTop: "1.5rem" }}>
+                <Link className="arrow-link" to="/projects?p=school-management">
+                  {t("viewProject", { name: t(school.titleKey) })}
+                  <ArrowForwardRounded fontSize="small" aria-hidden="true" />
+                </Link>
+              </p>
+            </div>
+            {school.image && (
+              <figure className="feature__shot">
+                <img src={school.image.src} alt="" width={school.image.width} height={school.image.height} loading="lazy" decoding="async" />
+              </figure>
+            )}
+          </div>
+
+          <div className="also">
+            {[finetic, ...explorations].map((item) => (
+              <div key={item.id}>
+                <h3>
+                  <Link to={`/projects?p=${item.id}`}>
+                    {t(item.titleKey)}
+                    <ArrowForwardRounded fontSize="small" aria-hidden="true" />
+                  </Link>
+                </h3>
+                <p>
+                  {t(item.domainKey)} · {t(item.statusKey)}
+                  {item.years ? ` · ${item.years}` : ""}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="section-foot">
+            <Link className="btn btn--line" to="/projects">
+              {t("allWork")}
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
+
 export default Home;

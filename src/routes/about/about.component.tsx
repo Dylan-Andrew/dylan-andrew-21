@@ -1,158 +1,74 @@
-import { Box, Chip, Grid, Link, Typography, useTheme } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
 
-import myself from "../../assets/DylanAndrew.jpg";
+import portrait from "../../assets/brand/portrait.webp";
 
-const skillCategories = [
-  {
-    labelKey: "skillsFrontend",
-    skills: ["React", "TypeScript", "Material UI"],
-  },
-  {
-    labelKey: "skillsBackend",
-    skills: ["Python", "Django / DRF", "FastAPI", "PHP"],
-  },
-  {
-    labelKey: "skillsDatabase",
-    skills: ["PostgreSQL", "MySQL"],
-  },
-  {
-    labelKey: "skillsDevOps",
-    skills: ["Docker", "Git", "CI/CD", "Pytest", "Jest"],
-  },
-  {
-    labelKey: "skillsGameDev",
-    skills: ["Unity", "C#"],
-  },
+const tools = [
+  { labelKey: "skillsFrontend", items: ["React", "TypeScript", "Material UI"] },
+  { labelKey: "skillsBackend", items: ["Python", "Django / DRF", "FastAPI", "PHP"] },
+  { labelKey: "skillsDatabase", items: ["PostgreSQL", "MySQL"] },
+  { labelKey: "skillsDevOps", items: ["Docker", "Git", "CI/CD", "Pytest", "Jest"] },
+  { labelKey: "skillsGameDev", items: ["Unity", "C#"] },
 ];
 
-const About = () => {
-  const theme = useTheme();
+const External = ({ href, children }: { href: string; children?: React.ReactNode }) => {
   const { t } = useTranslation();
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        my: "10px",
-        mx: "50px",
-      }}
-    >
-      <Grid container spacing={5}>
-        <Grid size={{ xs: 12, md: 9 }} sx={{ marginBottom: "20px" }}>
-          <Typography
-            variant="h2"
-            component="h1"
-            sx={{
-              marginBottom: "32px",
-              fontSize: {
-                xs: "32px",
-                md: "48px",
-              },
-              textAlign: "center",
-            }}
-          >
-            {t("about")}
-          </Typography>
-          <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
-            <Trans
-              i18nKey="aboutDescription1"
-              components={{
-                university: (
-                  <Link
-                    href={`https://www.esiee-it.fr/${t("languageCode")}`}
-                    color={theme.palette.primary.contrastText}
-                    underline="hover"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ),
-              }}
-            />
-          </Typography>
-          <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
-            <Trans
-              i18nKey="aboutDescription2"
-              components={{
-                finetic: (
-                  <Link
-                    href="https://www.finetic.eu"
-                    color={theme.palette.primary.contrastText}
-                    underline="hover"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ),
-              }}
-            />
-          </Typography>
-          <Typography variant="h6" component="p" sx={{ marginBottom: "16px" }}>
-            {t("aboutDescription3")}
-          </Typography>
-          <Typography
-            variant="h6"
-            component="p"
-            sx={{ marginTop: "24px", marginBottom: "16px" }}
-          >
-            {t("technologiesIntroduction")}
-          </Typography>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-            {skillCategories.map((category) => (
-              <Box key={category.labelKey}>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: theme.palette.primary.contrastText,
-                    fontWeight: 600,
-                    mb: 1,
-                    fontSize: "0.85rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.05em",
-                  }}
-                >
-                  {t(category.labelKey)}
-                </Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                  {category.skills.map((skill) => (
-                    <Chip
-                      key={skill}
-                      label={skill}
-                      variant="outlined"
-                      size="small"
-                      sx={{ fontSize: "0.8rem" }}
-                    />
-                  ))}
-                </Box>
-              </Box>
-            ))}
-          </Box>
-          <Typography variant="h6" component="p" sx={{ marginTop: "32px" }}>
-            {t("aboutDescription4")}
-          </Typography>
-        </Grid>
-        <Grid
-          size={{ xs: 12, md: 3 }}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={myself}
-            alt="myself"
-            width="100%"
-            style={{
-              borderRadius: "10%",
-              maxWidth: "300px",
-              height: "auto",
-            }}
-          />
-        </Grid>
-      </Grid>
-    </Box>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+      <span className="sr-only"> {t("opensInNewTab")}</span>
+    </a>
   );
 };
+
+const About = () => {
+  const { t } = useTranslation();
+  return (
+    <>
+      <header className="wrap page-head">
+        <h1 className="display">{t("aboutTitle")}</h1>
+      </header>
+
+      <section className="wrap" aria-label={t("aboutTitle")}>
+        <div className="about-grid">
+          <div className="prose">
+            <p className="hero__line" style={{ marginTop: 0, maxWidth: "26ch" }}>
+              {t("heroLine")}
+            </p>
+            <p>
+              <Trans
+                i18nKey="aboutDescription1"
+                components={{ university: <External href={`https://www.esiee-it.fr/${t("languageCode")}`} /> }}
+              />
+            </p>
+            <p>
+              <Trans i18nKey="aboutDescription2" components={{ finetic: <External href="https://www.finetic.eu" /> }} />
+            </p>
+            <p>{t("aboutDescription3")}</p>
+            <p>{t("aboutDescription4")}</p>
+          </div>
+          <figure className="about-portrait">
+            <img src={portrait} alt={t("portraitAlt")} width={900} height={1200} loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="tools-title">
+        <div className="wrap">
+          <h2 className="h2" id="tools-title" style={{ marginBottom: "2rem" }}>
+            {t("toolsTitle")}
+          </h2>
+          <dl className="tools">
+            {tools.map((group) => (
+              <div key={group.labelKey}>
+                <dt>{t(group.labelKey)}</dt>
+                <dd>{group.items.join(", ")}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+    </>
+  );
+};
+
 export default About;

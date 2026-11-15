@@ -1,0 +1,121 @@
+.stroke {
+  position: relative;
+  padding-left: clamp(3.5rem, 9vw, 7.5rem);
+  padding-top: 4.5rem;
+}
+
+.stroke--lead {
+  padding-top: 5.5rem;
+}
+
+.stroke__svg {
+  position: absolute;
+  inset: 0 auto auto 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.stroke__track {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.stroke__ink {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.stroke__graphite {
+  fill: none;
+  stroke: var(--graphite);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.stroke__dot {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 3;
+  transition: fill 240ms var(--ease-out);
+}
+
+.stroke__dot.is-reached {
+  fill: var(--ink);
+}
+
+.stroke__now {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 520ms var(--ease-out);
+}
+
+.stroke__now.is-reached {
+  stroke-dashoffset: 0;
+}
+
+.stroke__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.stroke__stop {
+  max-width: 44rem;
+}
+
+.stroke__when {
+  margin: 0 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.9rem;
+  row-gap: 0.15rem;
+}
+
+.stroke__anchor {
+  font-size: clamp(1.5rem, 2.6vw, 2.125rem);
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.stroke__label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--graphite);
+}
+
+.stroke__stop--now .stroke__anchor {
+  color: var(--red);
+}
+
+.stroke__body {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: var(--measure);
+}
+
+.stroke__body > :first-child {
+  margin-top: 0;
+}
+
+.stroke__body > :last-child {
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke__now,
+  .stroke__dot {
+    transition: none;
+  }
+}
