@@ -66,6 +66,7 @@ const Entry = ({ item, isTarget }: { item: WorkItem; isTarget: boolean }) => {
           </figure>
         )}
         <p>{t(item.descriptionKey)}</p>
+        <ExternalLink item={item} />
         {item.learnedKey && (
           <p className="learned">
             <span>{t("fieldLearned")}</span>

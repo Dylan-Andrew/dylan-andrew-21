@@ -569,6 +569,11 @@
   font-size: 1.125rem;
 }
 
+.entry__main > .arrow-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
 .entry__shot {
   margin: 0 0 1.5rem;
   background: var(--mist);
