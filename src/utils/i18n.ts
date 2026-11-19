@@ -87,11 +87,12 @@ i18n
           howBuilt: "How it's built",
           statusInUse: "In daily use",
           statusShipped: "Shipped",
+          statusLive: "Live",
           statusPersonal: "Personal project",
           statusJam: "Game jam",
           statusSchool: "School project",
           platformWeb: "Web",
-          platformMobile: "iOS, Android & web",
+          platformWebAndroid: "Web & Android",
           platformGame: "Game",
           platformVr: "VR",
           domainSchools: "Schools",
@@ -102,6 +103,7 @@ i18n
           domainSafety: "Construction safety",
           playOnItch: "Play on itch.io",
           downloadOnItch: "Download on itch.io",
+          openApp: "Open the app",
           opensInNewTab: "(opens in a new tab)",
 
           schoolMgmtTitle: "School Management System",
@@ -129,15 +131,15 @@ i18n
           liveRateHighlight2: "Real-time price streaming via WebSocket",
           liveRateHighlight3:
             "Backtesting engine with Sharpe ratio and equity curves",
-          f1CompanionTitle: "F1 Live Companion",
-          f1CompanionDescription:
-            "Real-time Formula 1 second-screen companion app. Surfaces live positions, tire strategies, on-track battles, and race control decisions during broadcast sessions.",
-          f1CompanionHighlight1:
-            "Live timing tower with algorithmic battle detection",
-          f1CompanionHighlight2:
-            "iOS, Android and web from one codebase",
-          f1CompanionHighlight3:
-            "Clean Architecture: the data source can be swapped without touching the app",
+          parcFermeTitle: "Parc Fermé",
+          parcFermeDescription:
+            "A Formula 1 companion for the whole race weekend: countdown to the next session, results and standings, live timing that switches on by itself when a session starts, and race analysis written in plain language. Built only on free data: the F1 live timing feed, Jolpica and OpenF1.",
+          parcFermeHighlight1:
+            "Live timing streamed from the official F1 feed over SignalR",
+          parcFermeHighlight2:
+            "Long-run pace and telemetry comparison, summed up in one sentence",
+          parcFermeHighlight3:
+            "One shared TypeScript core behind the web app and a native Android app",
           windletonTitle: "Windleton",
           windletonDescription:
             "3D puzzle game where you are trapped in your dad's manor. Solve the enigmas and leave this place. A school project built with Unity.",
@@ -310,11 +312,12 @@ i18n
           howBuilt: "Comment c'est construit",
           statusInUse: "Utilisé au quotidien",
           statusShipped: "Livré",
+          statusLive: "En ligne",
           statusPersonal: "Projet perso",
           statusJam: "Game jam",
           statusSchool: "Projet d'école",
           platformWeb: "Web",
-          platformMobile: "iOS, Android & web",
+          platformWebAndroid: "Web & Android",
           platformGame: "Jeu",
           platformVr: "VR",
           domainSchools: "Écoles",
@@ -325,6 +328,7 @@ i18n
           domainSafety: "Sécurité sur chantier",
           playOnItch: "Jouer sur itch.io",
           downloadOnItch: "Télécharger sur itch.io",
+          openApp: "Ouvrir l'app",
           opensInNewTab: "(s'ouvre dans un nouvel onglet)",
 
           schoolMgmtTitle: "Système de gestion scolaire",
@@ -354,14 +358,15 @@ i18n
           liveRateHighlight2: "Streaming de prix en temps réel via WebSocket",
           liveRateHighlight3:
             "Moteur de backtesting avec ratio de Sharpe et courbes d'equity",
-          f1CompanionTitle: "F1 Live Companion",
-          f1CompanionDescription:
-            "Application compagnon F1 en temps réel pour second écran. Affiche les positions, stratégies de pneus, batailles en piste et décisions de la direction de course pendant les sessions.",
-          f1CompanionHighlight1:
-            "Classement en direct avec détection algorithmique des batailles",
-          f1CompanionHighlight2: "iOS, Android et web depuis un seul codebase",
-          f1CompanionHighlight3:
-            `Clean Architecture${NBSP}: la source de données se remplace sans toucher à l'app`,
+          parcFermeTitle: "Parc Fermé",
+          parcFermeDescription:
+            `Un compagnon F1 pour tout le week-end de course${NBSP}: compte à rebours avant la prochaine session, résultats et classements, timing en direct qui s'active tout seul au départ de la session, et analyse de course expliquée simplement. Uniquement des données gratuites${NBSP}: le flux de timing F1, Jolpica et OpenF1.`,
+          parcFermeHighlight1:
+            "Timing en direct depuis le flux officiel F1, via SignalR",
+          parcFermeHighlight2:
+            "Rythme en relais longs et comparaison de télémétrie, résumés en une phrase",
+          parcFermeHighlight3:
+            "Un seul cœur TypeScript partagé entre l'app web et une app Android native",
           windletonTitle: "Windleton",
           windletonDescription:
             "Jeu de puzzle 3D où vous êtes piégé dans le manoir de votre père. Résolvez les énigmes et quittez cet endroit. Projet scolaire réalisé avec Unity.",

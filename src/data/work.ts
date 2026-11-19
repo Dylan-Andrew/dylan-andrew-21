@@ -1,13 +1,19 @@
 import schoolImg from "../assets/work/school-management.webp";
 import liveRateImg from "../assets/work/liverate-trader.webp";
-import f1Img from "../assets/work/f1-companion.webp";
+import parcFermeImg from "../assets/work/parc-ferme.webp";
 import windletonImg from "../assets/work/windleton.webp";
 import ascensionImg from "../assets/work/ascension.webp";
 import gilbertImg from "../assets/work/finding-gilbert.webp";
 import vrImg from "../assets/work/vr-effondrement.webp";
 
 export type WorkGroup = "shipped" | "explorations" | "games";
-export type WorkStatus = "statusInUse" | "statusShipped" | "statusPersonal" | "statusJam" | "statusSchool";
+export type WorkStatus =
+  | "statusInUse"
+  | "statusShipped"
+  | "statusLive"
+  | "statusPersonal"
+  | "statusJam"
+  | "statusSchool";
 
 export interface WorkItem {
   id: string;
@@ -66,16 +72,17 @@ export const work: WorkItem[] = [
     image: { src: liveRateImg, width: 1280, height: 698 },
   },
   {
-    id: "f1-companion",
+    id: "parc-ferme",
     group: "explorations",
-    titleKey: "f1CompanionTitle",
-    descriptionKey: "f1CompanionDescription",
+    titleKey: "parcFermeTitle",
+    descriptionKey: "parcFermeDescription",
     domainKey: "domainF1",
-    statusKey: "statusPersonal",
-    platformKey: "platformMobile",
-    highlights: ["f1CompanionHighlight1", "f1CompanionHighlight2", "f1CompanionHighlight3"],
-    stack: ["React", "TypeScript", "Expo SDK 56", "SignalR", "i18next"],
-    image: { src: f1Img, width: 1280, height: 698 },
+    statusKey: "statusLive",
+    platformKey: "platformWebAndroid",
+    highlights: ["parcFermeHighlight1", "parcFermeHighlight2", "parcFermeHighlight3"],
+    stack: ["React 19", "TypeScript", "Vite", "Expo SDK 58", "SignalR", "Zustand", "Playwright"],
+    image: { src: parcFermeImg, width: 1280, height: 698 },
+    link: { href: "https://parcferme-olive.vercel.app/", labelKey: "openApp" },
   },
   {
     id: "windleton",

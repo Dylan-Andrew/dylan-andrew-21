@@ -4,11 +4,13 @@ import { useTranslation } from "react-i18next";
 import AddRounded from "@mui/icons-material/AddRounded";
 import NorthEastRounded from "@mui/icons-material/NorthEastRounded";
 
-import { WorkGroup, WorkItem, work } from "../../data/work";
+import { WorkGroup, WorkItem, WorkStatus, work } from "../../data/work";
+
+const LIVE_STATUSES: WorkStatus[] = ["statusInUse", "statusShipped", "statusLive"];
 
 const Meta = ({ item }: { item: WorkItem }) => {
   const { t } = useTranslation();
-  const live = item.statusKey === "statusInUse" || item.statusKey === "statusShipped";
+  const live = LIVE_STATUSES.includes(item.statusKey);
   return (
     <dl className="meta">
       <dt>{t("fieldDomain")}</dt>
