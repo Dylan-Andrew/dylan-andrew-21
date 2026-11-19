@@ -15,11 +15,17 @@ export type WorkStatus =
   | "statusJam"
   | "statusSchool";
 
+const LIVE_STATUSES: WorkStatus[] = ["statusInUse", "statusShipped", "statusLive"];
+
+export const isLiveStatus = (status: WorkStatus) => LIVE_STATUSES.includes(status);
+
 export interface WorkItem {
   id: string;
   group: WorkGroup;
   titleKey: string;
   descriptionKey: string;
+  /** Short pitch for the home page; set on featured projects. */
+  summaryKey?: string;
   domainKey: string;
   statusKey: WorkStatus;
   platformKey: string;
@@ -34,10 +40,25 @@ export interface WorkItem {
 
 export const work: WorkItem[] = [
   {
+    id: "parc-ferme",
+    group: "shipped",
+    titleKey: "parcFermeTitle",
+    descriptionKey: "parcFermeDescription",
+    summaryKey: "parcFermeSummary",
+    domainKey: "domainF1",
+    statusKey: "statusLive",
+    platformKey: "platformWebAndroid",
+    highlights: ["parcFermeHighlight1", "parcFermeHighlight2", "parcFermeHighlight3"],
+    stack: ["React 19", "TypeScript", "Vite", "Expo SDK 58", "SignalR", "Zustand", "Playwright"],
+    image: { src: parcFermeImg, width: 1280, height: 698 },
+    link: { href: "https://parcferme-olive.vercel.app/", labelKey: "openApp" },
+  },
+  {
     id: "school-management",
     group: "shipped",
     titleKey: "schoolMgmtTitle",
     descriptionKey: "schoolMgmtDescription",
+    summaryKey: "schoolMgmtSummary",
     domainKey: "domainSchools",
     statusKey: "statusInUse",
     platformKey: "platformWeb",
@@ -45,19 +66,6 @@ export const work: WorkItem[] = [
     highlights: ["schoolMgmtHighlight1", "schoolMgmtHighlight2", "schoolMgmtHighlight3"],
     stack: ["React 19", "TypeScript", "Django 5.2", "DRF", "PostgreSQL", "Docker", "MUI"],
     image: { src: schoolImg, width: 1280, height: 699 },
-  },
-  {
-    id: "finetic-saas",
-    group: "shipped",
-    titleKey: "fineticProjectTitle",
-    descriptionKey: "fineticProjectDescription",
-    domainKey: "domainFinance",
-    statusKey: "statusShipped",
-    platformKey: "platformWeb",
-    years: "2023–2025",
-    learnedKey: "fineticProjectLearned",
-    highlights: ["fineticProjectHighlight1", "fineticProjectHighlight2", "fineticProjectHighlight3"],
-    stack: ["React", "TypeScript", "Material UI / Joy UI", "Python", "Django", "PostgreSQL", "Pytest", "Jest"],
   },
   {
     id: "liverate-trader",
@@ -70,19 +78,6 @@ export const work: WorkItem[] = [
     highlights: ["liveRateHighlight1", "liveRateHighlight2", "liveRateHighlight3"],
     stack: ["React 19", "TypeScript", "FastAPI", "PostgreSQL", "WebSocket", "Zustand"],
     image: { src: liveRateImg, width: 1280, height: 698 },
-  },
-  {
-    id: "parc-ferme",
-    group: "explorations",
-    titleKey: "parcFermeTitle",
-    descriptionKey: "parcFermeDescription",
-    domainKey: "domainF1",
-    statusKey: "statusLive",
-    platformKey: "platformWebAndroid",
-    highlights: ["parcFermeHighlight1", "parcFermeHighlight2", "parcFermeHighlight3"],
-    stack: ["React 19", "TypeScript", "Vite", "Expo SDK 58", "SignalR", "Zustand", "Playwright"],
-    image: { src: parcFermeImg, width: 1280, height: 698 },
-    link: { href: "https://parcferme-olive.vercel.app/", labelKey: "openApp" },
   },
   {
     id: "windleton",

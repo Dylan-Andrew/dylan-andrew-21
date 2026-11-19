@@ -5,7 +5,50 @@ import ArrowForwardRounded from "@mui/icons-material/ArrowForwardRounded";
 import portrait from "../../assets/brand/portrait.webp";
 import SignatureStroke, { StrokeStop } from "../../components/signature-stroke/signature-stroke.component";
 import HeroStroke from "../../components/signature-stroke/hero-stroke.component";
-import { contact, work } from "../../data/work";
+import ExternalLink from "../../components/external-link/external-link.component";
+import { WorkItem, contact, isLiveStatus, work } from "../../data/work";
+
+const Feature = ({ item, flipped }: { item: WorkItem; flipped: boolean }) => {
+  const { t } = useTranslation();
+  const title = t(item.titleKey);
+  const titleId = `feature-${item.id}-title`;
+  return (
+    <article className={`feature${flipped ? " feature--flip" : ""}`} aria-labelledby={titleId}>
+      <div>
+        <h3 className="h3" id={titleId}>
+          {title}
+        </h3>
+        <dl className="meta">
+          <dt>{t("fieldDomain")}</dt>
+          <dd>{t(item.domainKey)}</dd>
+          {item.years && (
+            <>
+              <dt>{t("fieldYears")}</dt>
+              <dd>{item.years}</dd>
+            </>
+          )}
+          <dt>{t("fieldStatus")}</dt>
+          <dd>
+            <span className={`status${isLiveStatus(item.statusKey) ? " status--live" : ""}`}>{t(item.statusKey)}</span>
+          </dd>
+        </dl>
+        {item.summaryKey && <p>{t(item.summaryKey)}</p>}
+        <p className="feature__actions">
+          <Link className="arrow-link" to={`/projects?p=${item.id}`}>
+            {t("viewProject", { name: title })}
+            <ArrowForwardRounded fontSize="small" aria-hidden="true" />
+          </Link>
+          <ExternalLink item={item} />
+        </p>
+      </div>
+      {item.image && (
+        <figure className="feature__shot">
+          <img src={item.image.src} alt="" width={item.image.width} height={item.image.height} loading="lazy" decoding="async" />
+        </figure>
+      )}
+    </article>
+  );
+};
 
 const Home = () => {
   const { t } = useTranslation();
@@ -24,6 +67,12 @@ const Home = () => {
         <>
           <p>{t("stopNowText")}</p>
           <p>
+            <Link className="arrow-link" to="/projects?p=parc-ferme">
+              {t("viewProject", { name: t("parcFermeTitle") })}
+              <ArrowForwardRounded fontSize="small" aria-hidden="true" />
+            </Link>
+          </p>
+          <p>
             <Link className="arrow-link" to="/projects?p=school-management">
               {t("viewProject", { name: t("schoolMgmtTitle") })}
               <ArrowForwardRounded fontSize="small" aria-hidden="true" />
@@ -34,9 +83,8 @@ const Home = () => {
     },
   ];
 
-  const school = work.find((w) => w.id === "school-management")!;
+  const featured = work.filter((w) => w.group === "shipped");
   const explorations = work.filter((w) => w.group === "explorations");
-  const finetic = work.find((w) => w.id === "finetic-saas")!;
 
   return (
     <>
@@ -81,36 +129,12 @@ const Home = () => {
           <h2 className="h2" id="shipped-title" style={{ marginBottom: "clamp(2rem, 5vw, 3.5rem)" }}>
             {t("selectedWorkTitle")}
           </h2>
-          <div className="feature">
-            <div>
-              <h3 className="h3">{t(school.titleKey)}</h3>
-              <dl className="meta">
-                <dt>{t("fieldDomain")}</dt>
-                <dd>{t(school.domainKey)}</dd>
-                <dt>{t("fieldYears")}</dt>
-                <dd>{school.years}</dd>
-                <dt>{t("fieldStatus")}</dt>
-                <dd>
-                  <span className="status status--live">{t(school.statusKey)}</span>
-                </dd>
-              </dl>
-              <p>{t("schoolMgmtHighlight1")}. {t("schoolMgmtHighlight2")}.</p>
-              <p style={{ marginTop: "1.5rem" }}>
-                <Link className="arrow-link" to="/projects?p=school-management">
-                  {t("viewProject", { name: t(school.titleKey) })}
-                  <ArrowForwardRounded fontSize="small" aria-hidden="true" />
-                </Link>
-              </p>
-            </div>
-            {school.image && (
-              <figure className="feature__shot">
-                <img src={school.image.src} alt="" width={school.image.width} height={school.image.height} loading="lazy" decoding="async" />
-              </figure>
-            )}
-          </div>
+          {featured.map((item, index) => (
+            <Feature key={item.id} item={item} flipped={index % 2 === 1} />
+          ))}
 
           <div className="also">
-            {[finetic, ...explorations].map((item) => (
+            {explorations.map((item) => (
               <div key={item.id}>
                 <h3>
                   <Link to={`/projects?p=${item.id}`}>

@@ -54,9 +54,9 @@ i18n
           stopEsieeDomain: "VR & game development",
           stopEsieeText:
             "Master's in IT Engineering at ESIEE-IT, specialised in VR and game development.",
-          stopNowDomain: "Schools",
+          stopNowDomain: "Schools & Formula 1",
           stopNowText:
-            "A school management system used every day by a real school's admin team, alongside personal projects in trading and Formula 1.",
+            "A school management system used every day by a real school's admin team, and Parc Fermé, a Formula 1 companion anyone can use during a race weekend.",
 
           selectedWorkTitle: "Shipped and in use",
           allWork: "All work",
@@ -109,21 +109,12 @@ i18n
           schoolMgmtTitle: "School Management System",
           schoolMgmtDescription:
             "Full-stack web application digitalizing the administrative management of a real school. Handles student records, enrollment, class management, PDF certificate generation, and analytics dashboards. V1 in production, used daily.",
+          schoolMgmtSummary:
+            "Used daily by a real school's admin team. PDF certificate generation with @react-pdf.",
           schoolMgmtHighlight1: "Used daily by a real school's admin team",
           schoolMgmtHighlight2: "PDF certificate generation with @react-pdf",
           schoolMgmtHighlight3:
             "Row-Level Security and a contract-first API generated with Orval",
-          fineticProjectTitle: "Business-planning SaaS at Finetic",
-          fineticProjectDescription:
-            "A SaaS business-planning tool for a financial consulting firm. I was its main developer for two years, from UI design to REST API architecture.",
-          fineticProjectHighlight1:
-            "Complete front-end: dashboards, data exports and business interfaces",
-          fineticProjectHighlight2:
-            "REST APIs and backend logic in Python/Django, including complex financial modelling",
-          fineticProjectHighlight3:
-            "PostgreSQL modelling and optimisation for performance and data integrity",
-          fineticProjectLearned:
-            "The finance domain in depth, so features matched what clients actually needed.",
           liveRateTitle: "LiveRate Trader",
           liveRateDescription:
             "Real-time FX trading platform with a Bloomberg-terminal inspired dashboard. Features live market data streaming via WebSocket, interactive charts with technical indicators, order execution, and a strategy backtesting engine.",
@@ -132,6 +123,8 @@ i18n
           liveRateHighlight3:
             "Backtesting engine with Sharpe ratio and equity curves",
           parcFermeTitle: "Parc Fermé",
+          parcFermeSummary:
+            "Open to anyone during a race weekend: live timing, results and standings, and race analysis in plain language.",
           parcFermeDescription:
             "A Formula 1 companion for the whole race weekend: countdown to the next session, results and standings, live timing that switches on by itself when a session starts, and race analysis written in plain language. Built only on free data: the F1 live timing feed, Jolpica and OpenF1.",
           parcFermeHighlight1:
@@ -279,9 +272,9 @@ i18n
           stopEsieeDomain: "VR & jeux vidéo",
           stopEsieeText:
             "Master Manager en Ingénierie Informatique à l'ESIEE-IT, spécialisation VR et jeux vidéo.",
-          stopNowDomain: "Écoles",
+          stopNowDomain: "Écoles & Formule 1",
           stopNowText:
-            "Un système de gestion scolaire utilisé chaque jour par l'équipe administrative d'une vraie école, en parallèle de projets perso en trading et en Formule 1.",
+            "Un système de gestion scolaire utilisé chaque jour par l'équipe administrative d'une vraie école, et Parc Fermé, un compagnon F1 que tout le monde peut utiliser pendant un week-end de course.",
 
           selectedWorkTitle: "Livré et utilisé",
           allWork: "Tous les projets",
@@ -334,22 +327,13 @@ i18n
           schoolMgmtTitle: "Système de gestion scolaire",
           schoolMgmtDescription:
             "Application web full-stack digitalisant la gestion administrative d'une vraie école. Gère les fiches élèves, inscriptions, classes, génération de certificats PDF et tableaux de bord analytiques. V1 en production, utilisée au quotidien.",
+          schoolMgmtSummary:
+            "Utilisé quotidiennement par l'équipe admin d'une école. Génération de certificats PDF avec @react-pdf.",
           schoolMgmtHighlight1:
             "Utilisé quotidiennement par l'équipe admin d'une école",
           schoolMgmtHighlight2: "Génération de certificats PDF avec @react-pdf",
           schoolMgmtHighlight3:
             "Row-Level Security et API contract-first générée avec Orval",
-          fineticProjectTitle: "SaaS de business planning chez Finetic",
-          fineticProjectDescription:
-            "Un outil SaaS de business planning pour un cabinet de conseil financier. J'en ai été le développeur principal pendant deux ans, du design UI à l'architecture des API REST.",
-          fineticProjectHighlight1:
-            `Front-end complet${NBSP}: dashboards, exports de données et interfaces métier`,
-          fineticProjectHighlight2:
-            "API REST et logique back-end en Python/Django, avec de la modélisation financière complexe",
-          fineticProjectHighlight3:
-            "Modélisation et optimisation PostgreSQL pour la performance et l'intégrité des données",
-          fineticProjectLearned:
-            "Le domaine financier en profondeur, pour que chaque fonctionnalité réponde aux vrais besoins des clients.",
           liveRateTitle: "LiveRate Trader",
           liveRateDescription:
             "Plateforme de trading FX en temps réel avec un dashboard inspiré de Bloomberg. Streaming de données de marché via WebSocket, graphiques interactifs avec indicateurs techniques, exécution d'ordres et moteur de backtesting.",
@@ -359,6 +343,8 @@ i18n
           liveRateHighlight3:
             "Moteur de backtesting avec ratio de Sharpe et courbes d'equity",
           parcFermeTitle: "Parc Fermé",
+          parcFermeSummary:
+            `Ouvert à tous pendant un week-end de course${NBSP}: timing en direct, résultats et classements, et analyse de course expliquée simplement.`,
           parcFermeDescription:
             `Un compagnon F1 pour tout le week-end de course${NBSP}: compte à rebours avant la prochaine session, résultats et classements, timing en direct qui s'active tout seul au départ de la session, et analyse de course expliquée simplement. Uniquement des données gratuites${NBSP}: le flux de timing F1, Jolpica et OpenF1.`,
           parcFermeHighlight1:

@@ -2,15 +2,13 @@ import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AddRounded from "@mui/icons-material/AddRounded";
-import NorthEastRounded from "@mui/icons-material/NorthEastRounded";
 
-import { WorkGroup, WorkItem, WorkStatus, work } from "../../data/work";
-
-const LIVE_STATUSES: WorkStatus[] = ["statusInUse", "statusShipped", "statusLive"];
+import ExternalLink from "../../components/external-link/external-link.component";
+import { WorkGroup, WorkItem, isLiveStatus, work } from "../../data/work";
 
 const Meta = ({ item }: { item: WorkItem }) => {
   const { t } = useTranslation();
-  const live = LIVE_STATUSES.includes(item.statusKey);
+  const live = isLiveStatus(item.statusKey);
   return (
     <dl className="meta">
       <dt>{t("fieldDomain")}</dt>
@@ -28,18 +26,6 @@ const Meta = ({ item }: { item: WorkItem }) => {
       <dt>{t("fieldPlatform")}</dt>
       <dd>{t(item.platformKey)}</dd>
     </dl>
-  );
-};
-
-const ExternalLink = ({ item }: { item: WorkItem }) => {
-  const { t } = useTranslation();
-  if (!item.link) return null;
-  return (
-    <a className="arrow-link" href={item.link.href} target="_blank" rel="noopener noreferrer">
-      {t(item.link.labelKey)}
-      <NorthEastRounded fontSize="small" aria-hidden="true" />
-      <span className="sr-only"> {t("opensInNewTab")}</span>
-    </a>
   );
 };
 
